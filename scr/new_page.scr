@@ -1,0 +1,7 @@
+# create new sheet
+edit .s1000
+
+# add frame "a3l-loc" from library "frames" to page at pos 0,0
+#add a3l-loc@frames (0 0);
+
+add A4_LANDSCAPE_DEVELOPMENT@alr_frame (0 0);

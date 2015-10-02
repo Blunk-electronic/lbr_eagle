@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.5.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>motor drivers</description>
+<packages>
+<package name="S_SO48_POWER-PAD">
+<description>edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2014-06-06</description>
+<wire x1="-6.3" y1="-3.1" x2="6.3" y2="-3.1" width="0.15" layer="51"/>
+<wire x1="6.3" y1="-3.1" x2="6.3" y2="3.1" width="0.15" layer="51"/>
+<wire x1="6.3" y1="3.1" x2="-6.3" y2="3.1" width="0.15" layer="51"/>
+<wire x1="-6.3" y1="3.1" x2="-6.3" y2="-3.1" width="0.15" layer="51"/>
+<smd name="1" x="-5.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="2" x="-5.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="3" x="-4.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="4" x="-4.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="5" x="-3.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="6" x="-3.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="7" x="-2.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="8" x="-2.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="9" x="-1.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="10" x="-1.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="11" x="-0.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="12" x="-0.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="13" x="0.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="14" x="0.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="15" x="1.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="16" x="1.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="17" x="2.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="18" x="2.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="19" x="3.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="20" x="3.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="21" x="4.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="22" x="4.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="23" x="5.25" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="24" x="5.75" y="-3.6" dx="0.3" dy="1.6" layer="1"/>
+<smd name="25" x="5.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="26" x="5.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="27" x="4.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="28" x="4.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="29" x="3.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="30" x="3.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="31" x="2.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="32" x="2.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="33" x="1.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="34" x="1.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="35" x="0.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="36" x="0.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="37" x="-0.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="38" x="-0.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="39" x="-1.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="40" x="-1.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="41" x="-2.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="42" x="-2.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="43" x="-3.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="44" x="-3.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="45" x="-4.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="46" x="-4.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="47" x="-5.25" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="48" x="-5.75" y="3.6" dx="0.3" dy="1.6" layer="1" rot="R180"/>
+<smd name="49" x="0" y="0" dx="3.7" dy="3.65" layer="1" cream="no"/>
+<circle x="0" y="0" radius="0.9" width="0" layer="31"/>
+<wire x1="-6.1" y1="-3.1" x2="-6.3" y2="-3.1" width="0.15" layer="21"/>
+<wire x1="-6.3" y1="-3.1" x2="-6.3" y2="3.1" width="0.15" layer="21"/>
+<wire x1="-6.3" y1="3.1" x2="-6.1" y2="3.1" width="0.15" layer="21"/>
+<wire x1="6.1" y1="-3.1" x2="6.3" y2="-3.1" width="0.15" layer="21"/>
+<wire x1="6.3" y1="-3.1" x2="6.3" y2="3.1" width="0.15" layer="21"/>
+<wire x1="6.3" y1="3.1" x2="6.1" y2="3.1" width="0.15" layer="21"/>
+<rectangle x1="-5.85" y1="3.15" x2="-5.65" y2="4.15" layer="51"/>
+<rectangle x1="-5.35" y1="3.15" x2="-5.15" y2="4.15" layer="51"/>
+<rectangle x1="-4.85" y1="3.15" x2="-4.65" y2="4.15" layer="51"/>
+<rectangle x1="-4.35" y1="3.15" x2="-4.15" y2="4.15" layer="51"/>
+<rectangle x1="-3.85" y1="3.15" x2="-3.65" y2="4.15" layer="51"/>
+<rectangle x1="-3.35" y1="3.15" x2="-3.15" y2="4.15" layer="51"/>
+<rectangle x1="-2.85" y1="3.15" x2="-2.65" y2="4.15" layer="51"/>
+<rectangle x1="-2.35" y1="3.15" x2="-2.15" y2="4.15" layer="51"/>
+<rectangle x1="-1.85" y1="3.15" x2="-1.65" y2="4.15" layer="51"/>
+<rectangle x1="-1.35" y1="3.15" x2="-1.15" y2="4.15" layer="51"/>
+<rectangle x1="-0.85" y1="3.15" x2="-0.65" y2="4.15" layer="51"/>
+<rectangle x1="-0.35" y1="3.15" x2="-0.15" y2="4.15" layer="51"/>
+<rectangle x1="0.15" y1="3.15" x2="0.35" y2="4.15" layer="51"/>
+<rectangle x1="0.65" y1="3.15" x2="0.85" y2="4.15" layer="51"/>
+<rectangle x1="1.15" y1="3.15" x2="1.35" y2="4.15" layer="51"/>
+<rectangle x1="1.65" y1="3.15" x2="1.85" y2="4.15" layer="51"/>
+<rectangle x1="2.15" y1="3.15" x2="2.35" y2="4.15" layer="51"/>
+<rectangle x1="2.65" y1="3.15" x2="2.85" y2="4.15" layer="51"/>
+<rectangle x1="3.15" y1="3.15" x2="3.35" y2="4.15" layer="51"/>
+<rectangle x1="3.65" y1="3.15" x2="3.85" y2="4.15" layer="51"/>
+<rectangle x1="4.15" y1="3.15" x2="4.35" y2="4.15" layer="51"/>
+<rectangle x1="4.65" y1="3.15" x2="4.85" y2="4.15" layer="51"/>
+<rectangle x1="5.15" y1="3.15" x2="5.35" y2="4.15" layer="51"/>
+<rectangle x1="5.65" y1="3.15" x2="5.85" y2="4.15" layer="51"/>
+<rectangle x1="4.15" y1="-4.15" x2="4.35" y2="-3.15" layer="51"/>
+<rectangle x1="4.65" y1="-4.15" x2="4.85" y2="-3.15" layer="51"/>
+<rectangle x1="5.15" y1="-4.15" x2="5.35" y2="-3.15" layer="51"/>
+<rectangle x1="5.65" y1="-4.15" x2="5.85" y2="-3.15" layer="51"/>
+<rectangle x1="2.15" y1="-4.15" x2="2.35" y2="-3.15" layer="51"/>
+<rectangle x1="2.65" y1="-4.15" x2="2.85" y2="-3.15" layer="51"/>
+<rectangle x1="3.15" y1="-4.15" x2="3.35" y2="-3.15" layer="51"/>
+<rectangle x1="3.65" y1="-4.15" x2="3.85" y2="-3.15" layer="51"/>
+<rectangle x1="0.15" y1="-4.15" x2="0.35" y2="-3.15" layer="51"/>
+<rectangle x1="0.65" y1="-4.15" x2="0.85" y2="-3.15" layer="51"/>
+<rectangle x1="1.15" y1="-4.15" x2="1.35" y2="-3.15" layer="51"/>
+<rectangle x1="1.65" y1="-4.15" x2="1.85" y2="-3.15" layer="51"/>
+<rectangle x1="-1.85" y1="-4.15" x2="-1.65" y2="-3.15" layer="51"/>
+<rectangle x1="-1.35" y1="-4.15" x2="-1.15" y2="-3.15" layer="51"/>
+<rectangle x1="-0.85" y1="-4.15" x2="-0.65" y2="-3.15" layer="51"/>
+<rectangle x1="-0.35" y1="-4.15" x2="-0.15" y2="-3.15" layer="51"/>
+<rectangle x1="-3.85" y1="-4.15" x2="-3.65" y2="-3.15" layer="51"/>
+<rectangle x1="-3.35" y1="-4.15" x2="-3.15" y2="-3.15" layer="51"/>
+<rectangle x1="-2.85" y1="-4.15" x2="-2.65" y2="-3.15" layer="51"/>
+<rectangle x1="-2.35" y1="-4.15" x2="-2.15" y2="-3.15" layer="51"/>
+<rectangle x1="-5.85" y1="-4.15" x2="-5.65" y2="-3.15" layer="51"/>
+<rectangle x1="-5.35" y1="-4.15" x2="-5.15" y2="-3.15" layer="51"/>
+<rectangle x1="-4.85" y1="-4.15" x2="-4.65" y2="-3.15" layer="51"/>
+<rectangle x1="-4.35" y1="-4.15" x2="-4.15" y2="-3.15" layer="51"/>
+<circle x="-5.8" y="-2.3" radius="0.14141875" width="0.15" layer="21"/>
+<text x="7" y="1.5" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
+<text x="7" y="0" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
+<wire x1="-6.5" y1="4.5" x2="6.5" y2="4.5" width="0.1" layer="39"/>
+<wire x1="6.5" y1="4.5" x2="6.5" y2="-4.5" width="0.1" layer="39"/>
+<wire x1="6.5" y1="-4.5" x2="-6.5" y2="-4.5" width="0.1" layer="39"/>
+<wire x1="-6.5" y1="-4.5" x2="-6.5" y2="4.5" width="0.1" layer="39"/>
+</package>
+</packages>
+<symbols>
+<symbol name="DRV8821_INDEXER_LOGIC_AB">
+<description>indexer logic AB symbol &lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-07-16</description>
+<wire x1="-10.16" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<pin name="ABSTEP" x="-15.24" y="7.62" visible="pad" length="middle" direction="in"/>
+<pin name="ABDIR" x="-15.24" y="2.54" visible="pad" length="middle" direction="in"/>
+<pin name="!ABENBL" x="-15.24" y="-5.08" visible="pad" length="middle" direction="in"/>
+<pin name="ABUSM0" x="-15.24" y="0" visible="pad" length="middle" direction="in"/>
+<pin name="ABUSM1" x="-15.24" y="-2.54" visible="pad" length="middle" direction="in"/>
+<pin name="ABDECAY" x="-15.24" y="5.08" visible="pad" length="middle" direction="in"/>
+<pin name="!ABRESET" x="-15.24" y="-7.62" visible="pad" length="middle" direction="in"/>
+<text x="5.08" y="-6.35" size="2.54" layer="94" font="fixed" rot="R90">IDX AB</text>
+<text x="-8.255" y="6.985" size="1.27" layer="94" font="fixed">ABSTEP</text>
+<text x="-8.255" y="1.905" size="1.27" layer="94" font="fixed">ABDIR</text>
+<text x="-8.255" y="-5.715" size="1.27" layer="94" font="fixed">!ABENBL</text>
+<text x="-8.255" y="-0.635" size="1.27" layer="94" font="fixed">ABUSM0</text>
+<text x="-8.255" y="-3.175" size="1.27" layer="94" font="fixed">ABUSM1</text>
+<text x="-8.255" y="4.445" size="1.27" layer="94" font="fixed">ABDECAY</text>
+<text x="-8.255" y="-8.255" size="1.27" layer="94" font="fixed">!ABRESET</text>
+<text x="-10.16" y="12.7" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-10.16" y="10.795" size="1.27" layer="96" font="fixed">&gt;VALUE</text>
+</symbol>
+<symbol name="DRV8821_INDEXER_LOGIC_CD">
+<description>indexer logic CD symbol &lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-07-16</description>
+<wire x1="-10.16" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<pin name="CDSTEP" x="-15.24" y="7.62" visible="pad" length="middle" direction="in"/>
+<pin name="CDDIR" x="-15.24" y="2.54" visible="pad" length="middle" direction="in"/>
+<pin name="!CDENBL" x="-15.24" y="-5.08" visible="pad" length="middle" direction="in"/>
+<pin name="CDUSM0" x="-15.24" y="0" visible="pad" length="middle" direction="in"/>
+<pin name="CDUSM1" x="-15.24" y="-2.54" visible="pad" length="middle" direction="in"/>
+<pin name="CDDECAY" x="-15.24" y="5.08" visible="pad" length="middle" direction="in"/>
+<pin name="!CDRESET" x="-15.24" y="-7.62" visible="pad" length="middle" direction="in"/>
+<text x="5.08" y="-6.35" size="2.54" layer="94" font="fixed" rot="R90">IDX CD</text>
+<text x="-8.255" y="6.985" size="1.27" layer="94" font="fixed">CDSTEP</text>
+<text x="-8.255" y="1.905" size="1.27" layer="94" font="fixed">CDDIR</text>
+<text x="-8.255" y="-5.715" size="1.27" layer="94" font="fixed">!CDENBL</text>
+<text x="-8.255" y="-0.635" size="1.27" layer="94" font="fixed">CDUSM0</text>
+<text x="-8.255" y="-3.175" size="1.27" layer="94" font="fixed">CDUSM1</text>
+<text x="-8.255" y="4.445" size="1.27" layer="94" font="fixed">CDDECAY</text>
+<text x="-8.255" y="-8.255" size="1.27" layer="94" font="fixed">!CDRESET</text>
+<text x="-10.16" y="12.7" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-10.16" y="10.795" size="1.27" layer="96" font="fixed">&gt;VALUE</text>
+</symbol>
+<symbol name="DRV8821_PWR">
+<description>power symbol &lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-07-16</description>
+<wire x1="-22.86" y1="12.7" x2="22.86" y2="12.7" width="0.254" layer="94"/>
+<wire x1="22.86" y1="12.7" x2="22.86" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-12.7" x2="-22.86" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-22.86" y1="-12.7" x2="-22.86" y2="12.7" width="0.254" layer="94"/>
+<pin name="GND" x="0" y="-17.78" visible="pad" length="middle" direction="pwr" rot="R90"/>
+<pin name="THERMAL" x="7.62" y="-17.78" visible="pad" length="middle" direction="pas" rot="R90"/>
+<pin name="VM" x="7.62" y="17.78" visible="pad" length="middle" direction="pwr" rot="R270"/>
+<pin name="ABVREF" x="-27.94" y="5.08" visible="pad" length="middle" direction="pas"/>
+<pin name="CDVREF" x="-27.94" y="-5.08" visible="pad" length="middle" direction="pas"/>
+<pin name="CP2" x="27.94" y="-5.08" visible="pad" length="middle" direction="pas" rot="R180"/>
+<pin name="CP1" x="27.94" y="5.08" visible="pad" length="middle" direction="pas" rot="R180"/>
+<pin name="V3P3" x="-7.62" y="-17.78" visible="pad" length="middle" direction="pas" rot="R90"/>
+<pin name="VCP" x="-7.62" y="17.78" visible="pad" length="middle" direction="pas" rot="R270"/>
+<text x="-20.32" y="4.445" size="1.27" layer="94" font="fixed">ABVREF</text>
+<text x="-20.32" y="-5.715" size="1.27" layer="94" font="fixed">CDVREF</text>
+<text x="-8.255" y="10.16" size="1.27" layer="94" font="fixed" rot="R270">VCP</text>
+<text x="6.985" y="10.16" size="1.27" layer="94" font="fixed" rot="R270">VM</text>
+<text x="16.51" y="4.445" size="1.27" layer="94" font="fixed">CP_1</text>
+<text x="16.51" y="-5.715" size="1.27" layer="94" font="fixed">CP_2</text>
+<text x="8.255" y="-10.16" size="1.27" layer="94" font="fixed" rot="R90">THERMAL</text>
+<text x="0.635" y="-10.16" size="1.27" layer="94" font="fixed" rot="R90">GND</text>
+<text x="-6.985" y="-10.16" size="1.27" layer="94" font="fixed" rot="R90">V3P3</text>
+<text x="-3.175" y="-1.27" size="2.54" layer="94" font="fixed">PWR</text>
+<text x="12.7" y="15.24" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="12.7" y="13.335" size="1.27" layer="96" font="fixed">&gt;VALUE</text>
+</symbol>
+<symbol name="DRV8821_OUT_AB">
+<description>driver AB symbol &lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-07-16</description>
+<wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<pin name="AOUT1" x="15.24" y="7.62" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="AOUT2" x="15.24" y="5.08" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="BOUT1" x="15.24" y="-2.54" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="BOUT2" x="15.24" y="-5.08" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="AISEN" x="15.24" y="2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
+<pin name="BISEN" x="15.24" y="-7.62" visible="pad" length="middle" direction="pas" rot="R180"/>
+<text x="-5.08" y="-6.35" size="2.54" layer="94" font="fixed" rot="R90">AB OUT</text>
+<text x="7.62" y="8.255" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">AOUT1</text>
+<text x="7.62" y="5.715" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">AOUT2</text>
+<text x="7.62" y="3.175" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">AISEN</text>
+<text x="7.62" y="-6.985" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">BISEN</text>
+<text x="7.62" y="-1.905" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">BOUT1</text>
+<text x="7.62" y="-4.445" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">BOUT2</text>
+<text x="-10.16" y="12.7" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-10.16" y="10.795" size="1.27" layer="96" font="fixed">&gt;VALUE</text>
+</symbol>
+<symbol name="DRV8821_OUT_CD">
+<description>driver CD symbol &lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-07-16</description>
+<wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<pin name="COUT1" x="15.24" y="7.62" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="COUT2" x="15.24" y="5.08" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="DOUT1" x="15.24" y="-2.54" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="DOUT2" x="15.24" y="-5.08" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="CISEN" x="15.24" y="2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
+<pin name="DISEN" x="15.24" y="-7.62" visible="pad" length="middle" direction="pas" rot="R180"/>
+<text x="-5.08" y="-6.35" size="2.54" layer="94" font="fixed" rot="R90">CD OUT</text>
+<text x="7.62" y="8.255" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">COUT1</text>
+<text x="7.62" y="5.715" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">COUT2</text>
+<text x="7.62" y="3.175" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">CISEN</text>
+<text x="7.62" y="-6.985" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">DISEN</text>
+<text x="7.62" y="-1.905" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">DOUT1</text>
+<text x="7.62" y="-4.445" size="1.27" layer="94" font="fixed" ratio="21" rot="R180">DOUT2</text>
+<text x="-10.16" y="12.7" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-10.16" y="10.795" size="1.27" layer="96" font="fixed">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DRV8821" prefix="IC">
+<description>DRV8821 device &lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;</description>
+<gates>
+<gate name="_IDX_AB" symbol="DRV8821_INDEXER_LOGIC_AB" x="-21" y="14"/>
+<gate name="_IDX_CD" symbol="DRV8821_INDEXER_LOGIC_CD" x="-21" y="-12"/>
+<gate name="_OUT_AB" symbol="DRV8821_OUT_AB" x="17" y="14"/>
+<gate name="_OUT_CD" symbol="DRV8821_OUT_CD" x="17" y="-13"/>
+<gate name="_PWR" symbol="DRV8821_PWR" x="-4" y="-52" addlevel="request"/>
+</gates>
+<devices>
+<device name="DCA" package="S_SO48_POWER-PAD">
+<connects>
+<connect gate="_IDX_AB" pin="!ABENBL" pad="42"/>
+<connect gate="_IDX_AB" pin="!ABRESET" pad="40"/>
+<connect gate="_IDX_AB" pin="ABDECAY" pad="6"/>
+<connect gate="_IDX_AB" pin="ABDIR" pad="43"/>
+<connect gate="_IDX_AB" pin="ABSTEP" pad="45"/>
+<connect gate="_IDX_AB" pin="ABUSM0" pad="44"/>
+<connect gate="_IDX_AB" pin="ABUSM1" pad="41"/>
+<connect gate="_IDX_CD" pin="!CDENBL" pad="30"/>
+<connect gate="_IDX_CD" pin="!CDRESET" pad="28"/>
+<connect gate="_IDX_CD" pin="CDDECAY" pad="19"/>
+<connect gate="_IDX_CD" pin="CDDIR" pad="31"/>
+<connect gate="_IDX_CD" pin="CDSTEP" pad="33"/>
+<connect gate="_IDX_CD" pin="CDUSM0" pad="32"/>
+<connect gate="_IDX_CD" pin="CDUSM1" pad="29"/>
+<connect gate="_OUT_AB" pin="AISEN" pad="4"/>
+<connect gate="_OUT_AB" pin="AOUT1" pad="5"/>
+<connect gate="_OUT_AB" pin="AOUT2" pad="3"/>
+<connect gate="_OUT_AB" pin="BISEN" pad="47"/>
+<connect gate="_OUT_AB" pin="BOUT1" pad="48"/>
+<connect gate="_OUT_AB" pin="BOUT2" pad="46"/>
+<connect gate="_OUT_CD" pin="CISEN" pad="26"/>
+<connect gate="_OUT_CD" pin="COUT1" pad="27"/>
+<connect gate="_OUT_CD" pin="COUT2" pad="25"/>
+<connect gate="_OUT_CD" pin="DISEN" pad="21"/>
+<connect gate="_OUT_CD" pin="DOUT1" pad="22"/>
+<connect gate="_OUT_CD" pin="DOUT2" pad="20"/>
+<connect gate="_PWR" pin="ABVREF" pad="17"/>
+<connect gate="_PWR" pin="CDVREF" pad="18"/>
+<connect gate="_PWR" pin="CP1" pad="7"/>
+<connect gate="_PWR" pin="CP2" pad="8"/>
+<connect gate="_PWR" pin="GND" pad="10 11 12 13 14 15 34 35 36 37 38 39"/>
+<connect gate="_PWR" pin="THERMAL" pad="49"/>
+<connect gate="_PWR" pin="V3P3" pad="16"/>
+<connect gate="_PWR" pin="VCP" pad="9"/>
+<connect gate="_PWR" pin="VM" pad="1 2 23 24"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BOM" value="YES"/>
+<attribute name="COMMISSIONED" value="2013-08-30"/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="IC_PAC_S_SO48_POWER-PAD_VAL_DRV8821DCA" constant="no"/>
+<attribute name="UPDATED" value="2014-04-22"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

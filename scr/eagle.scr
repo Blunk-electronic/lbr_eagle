@@ -1,0 +1,126 @@
+# Configuration Script
+#
+# This file can be used to configure the editor windows. Settings for all
+# editor windows (for example, a common background colour) can be made in
+# the very beginning of the file, which means before  BRD: .
+
+
+#
+# everything that shall be executed in the Layout editor
+#
+# 2014-09-25:
+# - default ratio in brd and pac changed from 13 to 15 percent / Mario Blunk / Blunk electronic
+# 2014-11-20:
+# - default ratio in brd and pac changed from 15 to 13 percent / Mario Blunk / Blunk electronic
+
+BRD:
+GRI mm;
+GRI 1;
+GRI alt mm;
+GRI alt 0.2;
+CHANGE font vector;
+CHANGE shape round;
+SET size_menu 0.5 0.6 0.8 1 1.25 1.5 2 3 4 0.25;
+SET width_menu 0 0.1 0.15 0.5 1 2 3 4 0.25;
+SET drill_menu 0.3 0.8 1 1.5 2 3 4 0.6;
+CHANGE size 1;
+CHANGE width 0.15;
+CHANGE ratio 13;
+CHANGE drill 0.3;
+ASSIGN CTRL+B DISP bpla bdoc bnam bval borig -tpla -tdoc -tnam -tval -torig dim;
+ASSIGN CTRL+T DISP -bpla -bdoc -bnam -bval -borig tpla tdoc tnam tval torig dim;
+ASSIGN ALT+R 'script rats'; #RIP @; DISP -2 -15;
+#ASSIGN ALT+V VIA;
+ASSIGN ALT+D 'drc;';
+SET Option.AutoSetRouteWidthAndDrill 1;
+SET pad on;
+layer 53 tCopper;
+#SET color_layer tCopper 
+layer 54 bCopper;
+#SET color_layer bCopper 
+
+#SET vector_font on
+
+MENU 'Tools {\
+		New Page : | \
+		Make Net/Partlist : | \
+			}';
+
+
+#
+# everything that shall be executed in the Schematic editor
+#
+SCH:
+#attribute * project '';
+GRI inch;
+GRI 0.1;
+GRI alt inch;
+GRI alt 0.025;
+CHANGE font fixed;
+CHANGE ratio 8;
+SET width_menu 0.006 0.01 0.02;
+SET size_menu 0.1 0.07 0.05;
+CHANGE size 0.05;
+CHANGE width 0.006;
+SET color_layer info 5;
+SET AUTO_JUNCTION ON;
+#CLASS 1 gnd;
+#CLASS 2 supply;
+#CLASS 3 hv;
+
+MENU 'Tools {\
+		#New Page : SCR new_page; | \
+		Renumber Devices : RUN renumber-sheet.ulp -i 0 -n 100 -p TPX; | \
+		Make BOM : RUN bom.ulp; | \
+		#Make Net/Partlist : SCR make_net_part_list; | \
+			}';
+
+
+#
+# everything that shall be executed in the Library editor
+#
+LBR:
+
+#
+# everything that shall be executed in the Device editor
+#
+DEV:
+#ASSIGN CTRL+A ATT commissioned '201x-xx-xx' constant; # nogo
+ASSIGN CTRL+A 'ATT commissioned constant; ATT updated constant; ATT function variable; \
+               ATT part_code_bel variable; ATT part_code_ext variable; ATT bom constant';
+
+
+# everything that shall be executed in the Symbol editor
+SYM:
+CHANGE font fixed;
+GRI default;
+GRI alt 0.025;
+GRI on;
+CHANGE ratio 8;
+SET width_menu 0.006 0.01 0.015 0.02;
+CHANGE width 0.01;
+SET size_menu 0.1 0.07 0.05;
+CHANGE size 0.05;
+
+
+#
+# everything that shall be executed in the Package editor
+#
+PAC:
+GRID mm;
+GRID 0.5;
+GRID alt mm;
+GRID alt 0.1;
+GRI on;
+CHANGE ratio 13;
+CHANGE font vector;
+SET diameter_menu 5 4.5 4 3.5 3 2.5 2 1.5 1 auto;
+SET size_menu 0.5 0.6 0.8 1 1.25 1.5 2 3 4 0.25;
+SET width_menu 0.1 0.15 0.5 1 2 3 4 0.25;
+SET drill_menu 0.3 0.8 1 1.5 2 3 4 0.6;
+CHANGE width 0.15;
+CHANGE size 1;
+CHANGE drill 0.8;
+SET diameter auto;
+
+

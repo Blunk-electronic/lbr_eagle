@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.5.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="HEIGHT" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="DEPTH" color="7" fill="1" visible="no" active="no"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>USB interface ICs</description>
+<packages>
+<package name="S_LQFP64">
+<description>LQFP64 shrink quad flat pack, square package &lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-03-21</description>
+<circle x="-3.7501" y="-3.7501" radius="0.5002" width="0.15" layer="21"/>
+<wire x1="-6.5" y1="6.5" x2="6.5" y2="6.5" width="0.1998" layer="39"/>
+<wire x1="6.5" y1="6.5" x2="6.5" y2="-6.5" width="0.1998" layer="39"/>
+<wire x1="-6.5" y1="-6.5" x2="-6.5" y2="6.5" width="0.1998" layer="39"/>
+<wire x1="6.5" y1="-6.5" x2="-6.5" y2="-6.5" width="0.1998" layer="39"/>
+<wire x1="-4.72" y1="4.71" x2="4.71" y2="4.71" width="0.15" layer="21"/>
+<wire x1="4.71" y1="4.71" x2="4.71" y2="-4.71" width="0.15" layer="21"/>
+<wire x1="4.71" y1="-4.71" x2="-4.72" y2="-4.71" width="0.15" layer="21"/>
+<wire x1="-4.72" y1="-4.71" x2="-4.72" y2="4.71" width="0.15" layer="21"/>
+<rectangle x1="-3.8999" y1="-5.8999" x2="-3.5999" y2="-4.95" layer="51"/>
+<rectangle x1="-3.4" y1="-5.8999" x2="-3.1001" y2="-4.95" layer="51"/>
+<rectangle x1="-2.8999" y1="-5.8999" x2="-2.5999" y2="-4.95" layer="51"/>
+<rectangle x1="-2.4" y1="-5.8999" x2="-2.1001" y2="-4.95" layer="51"/>
+<rectangle x1="-1.8999" y1="-5.8999" x2="-1.5999" y2="-4.95" layer="51"/>
+<rectangle x1="-1.4" y1="-5.8999" x2="-1.1001" y2="-4.95" layer="51"/>
+<rectangle x1="-0.8999" y1="-5.8999" x2="-0.5999" y2="-4.95" layer="51"/>
+<rectangle x1="-0.4001" y1="-5.8999" x2="-0.1001" y2="-4.95" layer="51"/>
+<rectangle x1="0.1001" y1="-5.8999" x2="0.4001" y2="-4.95" layer="51"/>
+<rectangle x1="0.5999" y1="-5.8999" x2="0.8999" y2="-4.95" layer="51"/>
+<rectangle x1="1.1001" y1="-5.8999" x2="1.4" y2="-4.95" layer="51"/>
+<rectangle x1="1.5999" y1="-5.8999" x2="1.8999" y2="-4.95" layer="51"/>
+<rectangle x1="2.1001" y1="-5.8999" x2="2.4" y2="-4.95" layer="51"/>
+<rectangle x1="2.5999" y1="-5.8999" x2="2.8999" y2="-4.95" layer="51"/>
+<rectangle x1="3.1001" y1="-5.8999" x2="3.4" y2="-4.95" layer="51"/>
+<rectangle x1="3.5999" y1="-5.8999" x2="3.8999" y2="-4.95" layer="51"/>
+<rectangle x1="4.95" y1="-3.8999" x2="5.8999" y2="-3.5999" layer="51"/>
+<rectangle x1="4.95" y1="-3.4" x2="5.8999" y2="-3.1001" layer="51"/>
+<rectangle x1="4.95" y1="-2.8999" x2="5.8999" y2="-2.5999" layer="51"/>
+<rectangle x1="4.95" y1="-2.4" x2="5.8999" y2="-2.1001" layer="51"/>
+<rectangle x1="4.95" y1="-1.8999" x2="5.8999" y2="-1.5999" layer="51"/>
+<rectangle x1="4.95" y1="-1.4" x2="5.8999" y2="-1.1001" layer="51"/>
+<rectangle x1="4.95" y1="-0.8999" x2="5.8999" y2="-0.5999" layer="51"/>
+<rectangle x1="4.95" y1="-0.4001" x2="5.8999" y2="-0.1001" layer="51"/>
+<rectangle x1="4.95" y1="0.1001" x2="5.8999" y2="0.4001" layer="51"/>
+<rectangle x1="4.95" y1="0.5999" x2="5.8999" y2="0.8999" layer="51"/>
+<rectangle x1="4.95" y1="1.1001" x2="5.8999" y2="1.4" layer="51"/>
+<rectangle x1="4.95" y1="1.5999" x2="5.8999" y2="1.8999" layer="51"/>
+<rectangle x1="4.95" y1="2.1001" x2="5.8999" y2="2.4" layer="51"/>
+<rectangle x1="4.95" y1="2.5999" x2="5.8999" y2="2.8999" layer="51"/>
+<rectangle x1="4.95" y1="3.1001" x2="5.8999" y2="3.4" layer="51"/>
+<rectangle x1="4.95" y1="3.5999" x2="5.8999" y2="3.8999" layer="51"/>
+<rectangle x1="3.5999" y1="4.95" x2="3.8999" y2="5.8999" layer="51"/>
+<rectangle x1="3.1001" y1="4.95" x2="3.4" y2="5.8999" layer="51"/>
+<rectangle x1="2.5999" y1="4.95" x2="2.8999" y2="5.8999" layer="51"/>
+<rectangle x1="2.1001" y1="4.95" x2="2.4" y2="5.8999" layer="51"/>
+<rectangle x1="1.5999" y1="4.95" x2="1.8999" y2="5.8999" layer="51"/>
+<rectangle x1="1.1001" y1="4.95" x2="1.4" y2="5.8999" layer="51"/>
+<rectangle x1="0.5999" y1="4.95" x2="0.8999" y2="5.8999" layer="51"/>
+<rectangle x1="0.1001" y1="4.95" x2="0.4001" y2="5.8999" layer="51"/>
+<rectangle x1="-0.4001" y1="4.95" x2="-0.1001" y2="5.8999" layer="51"/>
+<rectangle x1="-0.8999" y1="4.95" x2="-0.5999" y2="5.8999" layer="51"/>
+<rectangle x1="-1.4" y1="4.95" x2="-1.1001" y2="5.8999" layer="51"/>
+<rectangle x1="-1.8999" y1="4.95" x2="-1.5999" y2="5.8999" layer="51"/>
+<rectangle x1="-2.4" y1="4.95" x2="-2.1001" y2="5.8999" layer="51"/>
+<rectangle x1="-2.8999" y1="4.95" x2="-2.5999" y2="5.8999" layer="51"/>
+<rectangle x1="-3.4" y1="4.95" x2="-3.1001" y2="5.8999" layer="51"/>
+<rectangle x1="-3.8999" y1="4.95" x2="-3.5999" y2="5.8999" layer="51"/>
+<rectangle x1="-5.8999" y1="3.5999" x2="-4.95" y2="3.8999" layer="51"/>
+<rectangle x1="-5.8999" y1="3.1001" x2="-4.95" y2="3.4" layer="51"/>
+<rectangle x1="-5.8999" y1="2.5999" x2="-4.95" y2="2.8999" layer="51"/>
+<rectangle x1="-5.8999" y1="2.1001" x2="-4.95" y2="2.4" layer="51"/>
+<rectangle x1="-5.8999" y1="1.5999" x2="-4.95" y2="1.8999" layer="51"/>
+<rectangle x1="-5.8999" y1="1.1001" x2="-4.95" y2="1.4" layer="51"/>
+<rectangle x1="-5.8999" y1="0.5999" x2="-4.95" y2="0.8999" layer="51"/>
+<rectangle x1="-5.8999" y1="0.1001" x2="-4.95" y2="0.4001" layer="51"/>
+<rectangle x1="-5.8999" y1="-0.4001" x2="-4.95" y2="-0.1001" layer="51"/>
+<rectangle x1="-5.8999" y1="-0.8999" x2="-4.95" y2="-0.5999" layer="51"/>
+<rectangle x1="-5.8999" y1="-1.4" x2="-4.95" y2="-1.1001" layer="51"/>
+<rectangle x1="-5.8999" y1="-1.8999" x2="-4.95" y2="-1.5999" layer="51"/>
+<rectangle x1="-5.8999" y1="-2.4" x2="-4.95" y2="-2.1001" layer="51"/>
+<rectangle x1="-5.8999" y1="-2.8999" x2="-4.95" y2="-2.5999" layer="51"/>
+<rectangle x1="-5.8999" y1="-3.4" x2="-4.95" y2="-3.1001" layer="51"/>
+<rectangle x1="-5.8999" y1="-3.8999" x2="-4.95" y2="-3.5999" layer="51"/>
+<smd name="1" x="-3.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="2" x="-3.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="3" x="-2.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="4" x="-2.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="5" x="-1.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="6" x="-1.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="7" x="-0.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="8" x="-0.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="9" x="0.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="10" x="0.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="11" x="1.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="12" x="1.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="13" x="2.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="14" x="2.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="15" x="3.25" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="16" x="3.75" y="-5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="17" x="5.6" y="-3.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="18" x="5.6" y="-3.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="19" x="5.6" y="-2.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="20" x="5.6" y="-2.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="21" x="5.6" y="-1.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="22" x="5.6" y="-1.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="23" x="5.6" y="-0.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="24" x="5.6" y="-0.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="25" x="5.6" y="0.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="26" x="5.6" y="0.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="27" x="5.6" y="1.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="28" x="5.6" y="1.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="29" x="5.6" y="2.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="30" x="5.6" y="2.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="31" x="5.6" y="3.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="32" x="5.6" y="3.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="33" x="3.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="34" x="3.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="35" x="2.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="36" x="2.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="37" x="1.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="38" x="1.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="39" x="0.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="40" x="0.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="41" x="-0.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="42" x="-0.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="43" x="-1.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="44" x="-1.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="45" x="-2.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="46" x="-2.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="47" x="-3.25" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="48" x="-3.75" y="5.6" dx="0.3" dy="1.2" layer="1"/>
+<smd name="49" x="-5.6" y="3.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="50" x="-5.6" y="3.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="51" x="-5.6" y="2.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="52" x="-5.6" y="2.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="53" x="-5.6" y="1.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="54" x="-5.6" y="1.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="55" x="-5.6" y="0.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="56" x="-5.6" y="0.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="57" x="-5.6" y="-0.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="58" x="-5.6" y="-0.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="59" x="-5.6" y="-1.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="60" x="-5.6" y="-1.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="61" x="-5.6" y="-2.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="62" x="-5.6" y="-2.75" dx="1.2" dy="0.3" layer="1"/>
+<smd name="63" x="-5.6" y="-3.25" dx="1.2" dy="0.3" layer="1"/>
+<smd name="64" x="-5.6" y="-3.75" dx="1.2" dy="0.3" layer="1"/>
+<text x="-5" y="8" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
+<text x="-5" y="6.5" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="FTDI_4232_CORE">
+<description>FTDI_4232_CORE symbol&lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-03-21</description>
+<wire x1="15.24" y1="25.4" x2="-17.78" y2="25.4" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="25.4" x2="-17.78" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-27.94" x2="15.24" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-27.94" x2="15.24" y2="25.4" width="0.254" layer="94"/>
+<pin name="!PWREN" x="17.78" y="17.78" visible="pad" length="short" direction="out" rot="R180"/>
+<pin name="!RESET" x="17.78" y="12.7" visible="pad" length="short" direction="in" rot="R180"/>
+<pin name="!SUSPEND" x="17.78" y="22.86" visible="pad" length="short" direction="in" rot="R180"/>
+<pin name="AGND" x="17.78" y="-20.32" visible="pad" length="short" direction="pwr" rot="R180"/>
+<pin name="EECLK" x="17.78" y="0" visible="pad" length="short" direction="out" rot="R180"/>
+<pin name="EECS" x="17.78" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="EEDATA" x="17.78" y="-2.54" visible="pad" length="short" rot="R180"/>
+<pin name="GND" x="17.78" y="-25.4" visible="pad" length="short" direction="pwr" rot="R180"/>
+<pin name="REF" x="17.78" y="7.62" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="TEST" x="-20.32" y="-25.4" visible="pad" length="short" direction="in"/>
+<pin name="USBDM" x="-20.32" y="-12.7" visible="pad" length="short" direction="in"/>
+<pin name="USBDP" x="-20.32" y="-17.78" visible="pad" length="short" direction="in"/>
+<pin name="VCCIO" x="-20.32" y="17.78" visible="pad" length="short" direction="pwr"/>
+<pin name="VCORE" x="-20.32" y="22.86" visible="pad" length="short" direction="pwr"/>
+<pin name="VPHY" x="-20.32" y="7.62" visible="pad" length="short" direction="pwr"/>
+<pin name="VPLL" x="-20.32" y="12.7" visible="pad" length="short" direction="pwr"/>
+<pin name="VREGIN" x="-20.32" y="0" visible="pad" length="short" direction="pwr"/>
+<pin name="VREGOUT" x="-20.32" y="-5.08" visible="pad" length="short" direction="pwr"/>
+<pin name="XTIN" x="17.78" y="-15.24" visible="pad" length="short" direction="in" rot="R180"/>
+<pin name="XTOUT" x="17.78" y="-10.16" visible="pad" length="short" direction="out" rot="R180"/>
+<text x="-15.24" y="28.575" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-15.24" y="26.67" size="1.27" layer="95" font="fixed">&gt;VALUE</text>
+<text x="-15.24" y="22.225" size="1.27" layer="94" font="fixed">VCORE</text>
+<text x="-15.24" y="12.065" size="1.27" layer="94" font="fixed">VPLL</text>
+<text x="-15.24" y="6.985" size="1.27" layer="94" font="fixed">VPHY</text>
+<text x="-15.24" y="17.145" size="1.27" layer="94" font="fixed">VCCIO</text>
+<text x="5.08" y="22.225" size="1.27" layer="94" font="fixed">!SUSPEND</text>
+<text x="5.08" y="17.145" size="1.27" layer="94" font="fixed">!PWREN</text>
+<text x="5.08" y="12.065" size="1.27" layer="94" font="fixed">!RESET</text>
+<text x="5.08" y="6.985" size="1.27" layer="94" font="fixed">REF</text>
+<text x="5.08" y="1.905" size="1.27" layer="94" font="fixed">EECS</text>
+<text x="5.08" y="-0.635" size="1.27" layer="94" font="fixed">EECLK</text>
+<text x="5.08" y="-3.175" size="1.27" layer="94" font="fixed">EEDATA</text>
+<text x="5.08" y="-10.795" size="1.27" layer="94" font="fixed">XTOUT</text>
+<text x="5.08" y="-15.875" size="1.27" layer="94" font="fixed">XTIN</text>
+<text x="5.08" y="-26.035" size="1.27" layer="94" font="fixed">GND</text>
+<text x="5.08" y="-20.955" size="1.27" layer="94" font="fixed">AGND</text>
+<text x="-15.24" y="-26.035" size="1.27" layer="94" font="fixed">TEST</text>
+<text x="-15.24" y="-18.415" size="1.27" layer="94" font="fixed">USBDP</text>
+<text x="-15.24" y="-13.335" size="1.27" layer="94" font="fixed">USBDM</text>
+<text x="-15.24" y="-5.715" size="1.27" layer="94" font="fixed">VREGOUT</text>
+<text x="-15.24" y="-0.635" size="1.27" layer="94" font="fixed">VREGIN</text>
+<text x="0" y="-12.7" size="2.54" layer="94" font="fixed" rot="R90">USB IF CORE</text>
+</symbol>
+<symbol name="FTDI_4232_PORT_AC">
+<description>FTDI_4232_PORT_AC symbol&lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-03-21</description>
+<wire x1="7.62" y1="12.7" x2="-17.78" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<pin name="ACBUS0/TXD" x="10.16" y="10.16" visible="pad" length="short" rot="R180"/>
+<pin name="ACBUS1/RXD" x="10.16" y="7.62" visible="pad" length="short" rot="R180"/>
+<pin name="ACBUS2/#RTS" x="10.16" y="5.08" visible="pad" length="short" rot="R180"/>
+<pin name="ACBUS3/#CTS" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="ACBUS4/#DTR" x="10.16" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="ACBUS5/#DSR" x="10.16" y="-2.54" visible="pad" length="short" rot="R180"/>
+<pin name="ACBUS6/#DCD" x="10.16" y="-5.08" visible="pad" length="short" rot="R180"/>
+<pin name="ACBUS7/#RI" x="10.16" y="-7.62" visible="pad" length="short" rot="R180"/>
+<text x="-17.78" y="15.875" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-17.78" y="13.97" size="1.27" layer="95" font="fixed">&gt;VALUE</text>
+<wire x1="-17.78" y1="12.7" x2="-17.78" y2="-10.16" width="0.254" layer="94"/>
+<text x="-7.62" y="9.525" size="1.27" layer="94" font="fixed">ACBUS0/TXD</text>
+<text x="-7.62" y="6.985" size="1.27" layer="94" font="fixed">ACBUS1/RXD</text>
+<text x="-7.62" y="4.445" size="1.27" layer="94" font="fixed">ACBUS2/#RTS</text>
+<text x="-7.62" y="1.905" size="1.27" layer="94" font="fixed">ACBUS3/#CTS</text>
+<text x="-7.62" y="-0.635" size="1.27" layer="94" font="fixed">ACBUS4/#DTR</text>
+<text x="-7.62" y="-3.175" size="1.27" layer="94" font="fixed">ACBUS5/#DSR</text>
+<text x="-7.62" y="-5.715" size="1.27" layer="94" font="fixed">ACBUS6/#DCD</text>
+<text x="-7.62" y="-8.255" size="1.27" layer="94" font="fixed">ACBUS7/#RI</text>
+<text x="-10.16" y="-7.62" size="2.54" layer="94" font="fixed" rot="R90">USB IF
+PORT AC</text>
+</symbol>
+<symbol name="FTDI_4232_PORT_AD">
+<description>FTDI_4232_PORT_AD symbol&lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-03-21</description>
+<pin name="ADBUS0/TXD" x="10.16" y="10.16" visible="pad" length="short" rot="R180"/>
+<pin name="ADBUS1/RXD" x="10.16" y="7.62" visible="pad" length="short" rot="R180"/>
+<pin name="ADBUS2/#RTS" x="10.16" y="5.08" visible="pad" length="short" rot="R180"/>
+<pin name="ADBUS3/#CTS" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="ADBUS4/#DTR" x="10.16" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="ADBUS5/#DSR" x="10.16" y="-2.54" visible="pad" length="short" rot="R180"/>
+<pin name="ADBUS6/#DCD" x="10.16" y="-5.08" visible="pad" length="short" rot="R180"/>
+<pin name="ADBUS7/#RI" x="10.16" y="-7.62" visible="pad" length="short" rot="R180"/>
+<wire x1="7.62" y1="12.7" x2="-17.78" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<text x="-17.78" y="15.875" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-17.78" y="13.97" size="1.27" layer="95" font="fixed">&gt;VALUE</text>
+<wire x1="-17.78" y1="12.7" x2="-17.78" y2="-10.16" width="0.254" layer="94"/>
+<text x="-7.62" y="9.525" size="1.27" layer="94" font="fixed">ADBUS0/TXD</text>
+<text x="-7.62" y="6.985" size="1.27" layer="94" font="fixed">ADBUS1/RXD</text>
+<text x="-7.62" y="4.445" size="1.27" layer="94" font="fixed">ADBUS2/#RTS</text>
+<text x="-7.62" y="1.905" size="1.27" layer="94" font="fixed">ADBUS3/#CTS</text>
+<text x="-7.62" y="-0.635" size="1.27" layer="94" font="fixed">ADBUS4/#DTR</text>
+<text x="-7.62" y="-3.175" size="1.27" layer="94" font="fixed">ADBUS5/#DSR</text>
+<text x="-7.62" y="-5.715" size="1.27" layer="94" font="fixed">ADBUS6/#DCD</text>
+<text x="-7.62" y="-8.255" size="1.27" layer="94" font="fixed">ADBUS7/#RI</text>
+<text x="-10.16" y="-7.62" size="2.54" layer="94" font="fixed" rot="R90">USB IF
+PORT AD</text>
+</symbol>
+<symbol name="FTDI_4232_PORT_BC">
+<description>FTDI_4232_PORT_BC symbol&lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-03-21</description>
+<pin name="BCBUS0/TXD" x="10.16" y="10.16" visible="pad" length="short" rot="R180"/>
+<pin name="BCBUS1/RXD" x="10.16" y="7.62" visible="pad" length="short" rot="R180"/>
+<pin name="BCBUS2/#RTS" x="10.16" y="5.08" visible="pad" length="short" rot="R180"/>
+<pin name="BCBUS3/#CTS" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="BCBUS4/#DTR" x="10.16" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="BCBUS5/#DSR" x="10.16" y="-2.54" visible="pad" length="short" rot="R180"/>
+<pin name="BCBUS6/#DCD" x="10.16" y="-5.08" visible="pad" length="short" rot="R180"/>
+<pin name="BCBUS7/#RI" x="10.16" y="-7.62" visible="pad" length="short" rot="R180"/>
+<wire x1="7.62" y1="12.7" x2="-17.78" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<text x="-17.78" y="15.875" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-17.78" y="13.97" size="1.27" layer="95" font="fixed">&gt;VALUE</text>
+<wire x1="-17.78" y1="12.7" x2="-17.78" y2="-10.16" width="0.254" layer="94"/>
+<text x="-7.62" y="9.525" size="1.27" layer="94" font="fixed">BCBUS0/TXD</text>
+<text x="-7.62" y="6.985" size="1.27" layer="94" font="fixed">BCBUS1/RXD</text>
+<text x="-7.62" y="4.445" size="1.27" layer="94" font="fixed">BCBUS2/#RTS</text>
+<text x="-7.62" y="1.905" size="1.27" layer="94" font="fixed">BCBUS3/#CTS</text>
+<text x="-7.62" y="-0.635" size="1.27" layer="94" font="fixed">BCBUS4/#DTR</text>
+<text x="-7.62" y="-3.175" size="1.27" layer="94" font="fixed">BCBUS5/#DSR</text>
+<text x="-7.62" y="-5.715" size="1.27" layer="94" font="fixed">BCBUS6/#DCD</text>
+<text x="-7.62" y="-8.255" size="1.27" layer="94" font="fixed">BCBUS7/#RI</text>
+<text x="-10.16" y="-7.62" size="2.54" layer="94" font="fixed" rot="R90">USB IF
+PORT BC</text>
+</symbol>
+<symbol name="FTDI_4232_PORT_BD">
+<description>FTDI_4232_PORT_BD symbol&lt;br&gt;
+edited: Mario Blunk / Blunk electronic &lt;br&gt;
+date: 2013-03-21</description>
+<pin name="BDBUS0/TXD" x="10.16" y="10.16" visible="pad" length="short" rot="R180"/>
+<pin name="BDBUS1/RXD" x="10.16" y="7.62" visible="pad" length="short" rot="R180"/>
+<pin name="BDBUS2/#RTS" x="10.16" y="5.08" visible="pad" length="short" rot="R180"/>
+<pin name="BDBUS3/#CTS" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="BDBUS4/#DTR" x="10.16" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="BDBUS5/#DSR" x="10.16" y="-2.54" visible="pad" length="short" rot="R180"/>
+<pin name="BDBUS6/#DCD" x="10.16" y="-5.08" visible="pad" length="short" rot="R180"/>
+<pin name="BDBUS7/#RI" x="10.16" y="-7.62" visible="pad" length="short" rot="R180"/>
+<wire x1="7.62" y1="12.7" x2="-17.78" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<text x="-17.78" y="15.875" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-17.78" y="13.97" size="1.27" layer="95" font="fixed">&gt;VALUE</text>
+<wire x1="-17.78" y1="12.7" x2="-17.78" y2="-10.16" width="0.254" layer="94"/>
+<text x="-7.62" y="9.525" size="1.27" layer="94" font="fixed">BDBUS0/TXD</text>
+<text x="-7.62" y="6.985" size="1.27" layer="94" font="fixed">BDBUS1/RXD</text>
+<text x="-7.62" y="4.445" size="1.27" layer="94" font="fixed">BDBUS2/#RTS</text>
+<text x="-7.62" y="1.905" size="1.27" layer="94" font="fixed">BDBUS3/#CTS</text>
+<text x="-7.62" y="-0.635" size="1.27" layer="94" font="fixed">BDBUS4/#DTR</text>
+<text x="-7.62" y="-3.175" size="1.27" layer="94" font="fixed">BDBUS5/#DSR</text>
+<text x="-7.62" y="-5.715" size="1.27" layer="94" font="fixed">BDBUS6/#DCD</text>
+<text x="-7.62" y="-8.255" size="1.27" layer="94" font="fixed">BDBUS7/#RI</text>
+<text x="-10.16" y="-7.62" size="2.54" layer="94" font="fixed" rot="R90">USB IF
+PORT BD</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FT2232H" prefix="IC">
+<description>drawn: Mario Blunk / Blunk electronic &lt;br&gt;</description>
+<gates>
+<gate name="_CORE" symbol="FTDI_4232_CORE" x="-12.7" y="7.62"/>
+<gate name="_PORT_AC" symbol="FTDI_4232_PORT_AC" x="40.64" y="20.32" addlevel="can"/>
+<gate name="_PORT_AD" symbol="FTDI_4232_PORT_AD" x="40.64" y="-20.32" addlevel="can"/>
+<gate name="_PORT_BC" symbol="FTDI_4232_PORT_BC" x="-10.16" y="-60.96" addlevel="can"/>
+<gate name="_PORT_BD" symbol="FTDI_4232_PORT_BD" x="40.64" y="-60.96" addlevel="can"/>
+</gates>
+<devices>
+<device name="L" package="S_LQFP64">
+<connects>
+<connect gate="_CORE" pin="!PWREN" pad="60"/>
+<connect gate="_CORE" pin="!RESET" pad="14"/>
+<connect gate="_CORE" pin="!SUSPEND" pad="36"/>
+<connect gate="_CORE" pin="AGND" pad="10"/>
+<connect gate="_CORE" pin="EECLK" pad="62"/>
+<connect gate="_CORE" pin="EECS" pad="63"/>
+<connect gate="_CORE" pin="EEDATA" pad="61"/>
+<connect gate="_CORE" pin="GND" pad="1 5 11 15 25 35 47 51"/>
+<connect gate="_CORE" pin="REF" pad="6"/>
+<connect gate="_CORE" pin="TEST" pad="13"/>
+<connect gate="_CORE" pin="USBDM" pad="7"/>
+<connect gate="_CORE" pin="USBDP" pad="8"/>
+<connect gate="_CORE" pin="VCCIO" pad="20 31 42 56"/>
+<connect gate="_CORE" pin="VCORE" pad="12 37 64"/>
+<connect gate="_CORE" pin="VPHY" pad="4"/>
+<connect gate="_CORE" pin="VPLL" pad="9"/>
+<connect gate="_CORE" pin="VREGIN" pad="50"/>
+<connect gate="_CORE" pin="VREGOUT" pad="49"/>
+<connect gate="_CORE" pin="XTIN" pad="2"/>
+<connect gate="_CORE" pin="XTOUT" pad="3"/>
+<connect gate="_PORT_AC" pin="ACBUS0/TXD" pad="26"/>
+<connect gate="_PORT_AC" pin="ACBUS1/RXD" pad="27"/>
+<connect gate="_PORT_AC" pin="ACBUS2/#RTS" pad="28"/>
+<connect gate="_PORT_AC" pin="ACBUS3/#CTS" pad="29"/>
+<connect gate="_PORT_AC" pin="ACBUS4/#DTR" pad="30"/>
+<connect gate="_PORT_AC" pin="ACBUS5/#DSR" pad="32"/>
+<connect gate="_PORT_AC" pin="ACBUS6/#DCD" pad="33"/>
+<connect gate="_PORT_AC" pin="ACBUS7/#RI" pad="34"/>
+<connect gate="_PORT_AD" pin="ADBUS0/TXD" pad="16"/>
+<connect gate="_PORT_AD" pin="ADBUS1/RXD" pad="17"/>
+<connect gate="_PORT_AD" pin="ADBUS2/#RTS" pad="18"/>
+<connect gate="_PORT_AD" pin="ADBUS3/#CTS" pad="19"/>
+<connect gate="_PORT_AD" pin="ADBUS4/#DTR" pad="21"/>
+<connect gate="_PORT_AD" pin="ADBUS5/#DSR" pad="22"/>
+<connect gate="_PORT_AD" pin="ADBUS6/#DCD" pad="23"/>
+<connect gate="_PORT_AD" pin="ADBUS7/#RI" pad="24"/>
+<connect gate="_PORT_BC" pin="BCBUS0/TXD" pad="48"/>
+<connect gate="_PORT_BC" pin="BCBUS1/RXD" pad="52"/>
+<connect gate="_PORT_BC" pin="BCBUS2/#RTS" pad="53"/>
+<connect gate="_PORT_BC" pin="BCBUS3/#CTS" pad="54"/>
+<connect gate="_PORT_BC" pin="BCBUS4/#DTR" pad="55"/>
+<connect gate="_PORT_BC" pin="BCBUS5/#DSR" pad="57"/>
+<connect gate="_PORT_BC" pin="BCBUS6/#DCD" pad="58"/>
+<connect gate="_PORT_BC" pin="BCBUS7/#RI" pad="59"/>
+<connect gate="_PORT_BD" pin="BDBUS0/TXD" pad="38"/>
+<connect gate="_PORT_BD" pin="BDBUS1/RXD" pad="39"/>
+<connect gate="_PORT_BD" pin="BDBUS2/#RTS" pad="40"/>
+<connect gate="_PORT_BD" pin="BDBUS3/#CTS" pad="41"/>
+<connect gate="_PORT_BD" pin="BDBUS4/#DTR" pad="43"/>
+<connect gate="_PORT_BD" pin="BDBUS5/#DSR" pad="44"/>
+<connect gate="_PORT_BD" pin="BDBUS6/#DCD" pad="45"/>
+<connect gate="_PORT_BD" pin="BDBUS7/#RI" pad="46"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BOM" value="YES"/>
+<attribute name="COMMISSIONED" value="2013-08-30"/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="IC_PAC_S_LQFP64_VAL_FT2232HL" constant="no"/>
+<attribute name="UPDATED" value=""/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
+</eagle>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -73,6 +73,44 @@
 <layer number="100" name="frame_development" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="101" name="frame_net_changers" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="120" name="brd_placement_notes" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="144" name="DrillLegend" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="145" name="DrillLegend_01-16" color="2" fill="9" visible="yes" active="yes"/>
+<layer number="146" name="DrillLegend_01-20" color="3" fill="9" visible="yes" active="yes"/>
+<layer number="201" name="TopDocument" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="202" name="Route2Document" color="1" fill="3" visible="yes" active="yes"/>
+<layer number="203" name="Route3Document" color="4" fill="3" visible="yes" active="yes"/>
+<layer number="204" name="Route4Document" color="1" fill="4" visible="yes" active="yes"/>
+<layer number="205" name="Route5Document" color="4" fill="4" visible="yes" active="yes"/>
+<layer number="206" name="Route6Document" color="1" fill="8" visible="yes" active="yes"/>
+<layer number="207" name="Route7Document" color="4" fill="8" visible="yes" active="yes"/>
+<layer number="208" name="Route8Document" color="1" fill="2" visible="yes" active="yes"/>
+<layer number="209" name="Route9Document" color="4" fill="2" visible="yes" active="yes"/>
+<layer number="210" name="Route10Document" color="1" fill="7" visible="yes" active="yes"/>
+<layer number="211" name="Route11Document" color="4" fill="7" visible="yes" active="yes"/>
+<layer number="212" name="Route12Document" color="1" fill="5" visible="yes" active="yes"/>
+<layer number="213" name="Route13Document" color="4" fill="5" visible="yes" active="yes"/>
+<layer number="214" name="Route14Document" color="1" fill="6" visible="yes" active="yes"/>
+<layer number="215" name="Route15Document" color="4" fill="6" visible="yes" active="yes"/>
+<layer number="216" name="BottomDocument" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="220" name="DimensionDocument" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="221" name="tPlaceDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="222" name="bPlaceDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="225" name="tNamesDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="226" name="bNamesDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="227" name="tValuesDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="228" name="bValuesDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="229" name="tStopDocument" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="230" name="bStopDocument" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="231" name="tCreamDocument" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="232" name="bCreamDocument" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="233" name="tFinishDocument" color="6" fill="3" visible="yes" active="yes"/>
+<layer number="234" name="bFinishDocument" color="6" fill="6" visible="yes" active="yes"/>
+<layer number="235" name="tGlueDocument" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="236" name="bGlueDocument" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="244" name="DrillsDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="245" name="HolesDocument" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="246" name="MillingDocument" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="247" name="MeasuresDocument" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <library>
 <description>drawing frames&lt;br&gt;
@@ -159,10 +197,9 @@ date: 2014-10-15</description>
 </packages>
 <symbols>
 <symbol name="A4_LANDSCAPE_DEVELOPMENT">
-<description>&lt;b&gt;A4 landscape&lt;/b&gt; drawing frame symbol&lt;br /&gt;
-to be used for development pages (see doc field)&lt;br /&gt;
-&lt;br /&gt;
-&lt;u&gt;NOTE:&lt;/u&gt; &lt;b&gt;layer 100&lt;/b&gt; used for this frame !</description>
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2015-10-16&lt;br&gt;
+NOTE: layer 100 used for this frame !</description>
 <wire x1="115.68" y1="3.84" x2="115.68" y2="9" width="0.1016" layer="100"/>
 <wire x1="115.68" y1="9" x2="115.68" y2="18" width="0.1016" layer="100"/>
 <wire x1="115.68" y1="18" x2="115.68" y2="22" width="0.1016" layer="100"/>
@@ -225,10 +262,14 @@ to be used for development pages (see doc field)&lt;br /&gt;
 <text x="116.14" y="34.64" size="1.27" layer="100" font="fixed">last update:</text>
 <text x="132.08" y="34.64" size="1.27" layer="100" font="fixed">&gt;LAST_DATE_TIME</text>
 <text x="132.08" y="27.94" size="1.778" layer="100" font="fixed">&gt;DRAWING_NUMBER</text>
+<text x="132.08" y="10.16" size="2.54" layer="100" font="fixed">&gt;DESCRIPTION</text>
+<text x="132.08" y="19" size="1.778" layer="100" font="fixed">&gt;STATUS</text>
+<text x="116.14" y="19" size="1.27" layer="100" font="fixed">Status:</text>
+<text x="254" y="35.56" size="1.27" layer="100" font="fixed" align="bottom-right">Copyright(C) Blunk electronic</text>
 </symbol>
 <symbol name="A4_LANDSCAPE_PRODUCT">
-<description>&lt;b&gt;A4 landscape&lt;/b&gt; drawing frame symbol&lt;br&gt;
-to be used for final product pages (see doc field)</description>
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2015-10-16</description>
 <wire x1="115.68" y1="3.84" x2="115.68" y2="9" width="0.1016" layer="94"/>
 <wire x1="115.68" y1="9" x2="115.68" y2="18" width="0.1016" layer="94"/>
 <wire x1="115.68" y1="18" x2="115.68" y2="22" width="0.1016" layer="94"/>
@@ -291,6 +332,10 @@ to be used for final product pages (see doc field)</description>
 <text x="116.14" y="34.64" size="1.27" layer="94" font="fixed">last update:</text>
 <text x="132.08" y="34.64" size="1.27" layer="94" font="fixed">&gt;LAST_DATE_TIME</text>
 <text x="132.08" y="27.94" size="1.778" layer="94" font="fixed">&gt;DRAWING_NUMBER</text>
+<text x="132.08" y="10.16" size="2.54" layer="94" font="fixed">&gt;DESCRIPTION</text>
+<text x="132.08" y="19" size="1.778" layer="94" font="fixed">&gt;STATUS</text>
+<text x="116.14" y="19" size="1.27" layer="94" font="fixed">Status:</text>
+<text x="254" y="35.56" size="1.27" layer="94" font="fixed" align="bottom-right">Copyright(C) Blunk electronic</text>
 </symbol>
 <symbol name="A4_LANDSCAPE_NET_CHANGERS">
 <description>&lt;b&gt;A4 landscape&lt;/b&gt; drawing frame symbol&lt;br /&gt;
@@ -363,8 +408,7 @@ to be used for net changers pages ONLY ! (see doc field)&lt;br /&gt;
 </symbols>
 <devicesets>
 <deviceset name="A4_LANDSCAPE_DEVELOPMENT" prefix="FRAME_DEVELOPMENT">
-<description>&lt;b&gt;A4 landscape&lt;/b&gt; drawing frame&lt;br&gt;
-to be used for &lt;b&gt;development pages&lt;/b&gt; (see doc field)</description>
+<description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
 <gate name="G$1" symbol="A4_LANDSCAPE_DEVELOPMENT" x="0" y="0"/>
 </gates>
@@ -374,6 +418,7 @@ to be used for &lt;b&gt;development pages&lt;/b&gt; (see doc field)</description
 <technology name="">
 <attribute name="BOM" value="NO"/>
 <attribute name="COMMISSIONED" value="2013-08-30"/>
+<attribute name="DESCRIPTION" value="" constant="no"/>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
@@ -384,8 +429,7 @@ to be used for &lt;b&gt;development pages&lt;/b&gt; (see doc field)</description
 </devices>
 </deviceset>
 <deviceset name="A4_LANDSCAPE_PRODUCT" prefix="FRAME_PRODUCT">
-<description>&lt;b&gt;A4 landscape&lt;/b&gt; drawing frame&lt;br&gt;
-to be used for &lt;b&gt;final product pages&lt;/b&gt; (see doc field)</description>
+<description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
 <gate name="G$1" symbol="A4_LANDSCAPE_PRODUCT" x="0" y="0"/>
 </gates>
@@ -395,6 +439,7 @@ to be used for &lt;b&gt;final product pages&lt;/b&gt; (see doc field)</descripti
 <technology name="">
 <attribute name="BOM" value="NO"/>
 <attribute name="COMMISSIONED" value="2013-08-30"/>
+<attribute name="DESCRIPTION" value="" constant="no"/>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>

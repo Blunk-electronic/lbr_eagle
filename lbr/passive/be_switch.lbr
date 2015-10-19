@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -457,7 +457,7 @@ date: 2014-10-14</description>
 <attribute name="BOM" value="YES"/>
 <attribute name="COMMISSIONED" value="2014-10-14"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_BEL" value="T_PAC_T_PUSH_BUTTON_6X6" constant="no"/>
+<attribute name="PART_CODE_BEL" value="S_PAC_T_PUSH_BUTTON_6X6MM" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>

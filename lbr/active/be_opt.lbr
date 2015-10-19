@@ -705,8 +705,8 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <attribute name="BOM" value="YES"/>
 <attribute name="COMMISSIONED" value="2015-10-02"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_BEL" value="" constant="no"/>
-<attribute name="PART_CODE_EXT" value="DIS_PAC_T_VQB71_VAL_VQB71" constant="no"/>
+<attribute name="PART_CODE_BEL" value="DIS_PAC_T_VQB71_VAL_VQB71" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>
 </technologies>

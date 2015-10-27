@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -368,8 +368,8 @@ date: 2014-10-13</description>
 <rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="51"/>
 <pad name="+" x="-1.27" y="0" drill="0.8" diameter="1.6002"/>
 <pad name="-" x="1.27" y="0" drill="0.8" diameter="1.6002" shape="octagon"/>
-<text x="3.75" y="0.25" size="1" layer="25" font="vector" ratio="15">&gt;NAME</text>
-<text x="3.75" y="-1.25" size="1" layer="27" font="vector" ratio="15">&gt;VALUE</text>
+<text x="3.75" y="0.25" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
+<text x="3.75" y="-1.25" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
 <circle x="0" y="0" radius="3.807884375" width="0.15" layer="39"/>
 </package>
 <package name="T_0207_GRID_10MM">
@@ -581,8 +581,8 @@ date: 2015-01-15</description>
 <rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="51"/>
 <pad name="+" x="-1.27" y="0" drill="0.8" diameter="1.6002"/>
 <pad name="-" x="1.27" y="0" drill="0.8" diameter="1.6002" shape="octagon"/>
-<text x="3.75" y="0.25" size="1" layer="25" font="vector" ratio="15">&gt;NAME</text>
-<text x="3.75" y="-1.25" size="1" layer="27" font="vector" ratio="15">&gt;VALUE</text>
+<text x="3.75" y="0.25" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
+<text x="3.75" y="-1.25" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
 <circle x="0" y="0" radius="2.8" width="0.15" layer="39"/>
 </package>
 <package name="T_218_GRID_80">

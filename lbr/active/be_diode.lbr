@@ -169,9 +169,9 @@ date: 2015-10-15</description>
 <text x="-3" y="-3" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
 <text x="-3" y="-4.5" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
 </package>
-<package name="S_SOD732">
+<package name="S_SOD723">
 <description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
-date: 2014-09-04</description>
+date: 2015-11-17</description>
 <smd name="A" x="-0.65" y="0" dx="0.5" dy="0.6" layer="1"/>
 <smd name="C" x="0.65" y="0" dx="0.5" dy="0.6" layer="1"/>
 <wire x1="-0.5" y1="0.3" x2="0.5" y2="0.3" width="0.15" layer="51"/>
@@ -389,9 +389,9 @@ date: 2015-02-16</description>
 <attribute name="BOM" value="YES"/>
 <attribute name="COMMISSIONED" value="2014-09-03"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_BEL" value="D_PAC_T_DO204_GRID_10mm_VAL_" constant="no"/>
+<attribute name="PART_CODE_BEL" value="D_PAC_T_DO204_GRID_10MM_VAL_" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
-<attribute name="UPDATED" value="2015-04-14"/>
+<attribute name="UPDATED" value="2015-11-17"/>
 </technology>
 </technologies>
 </device>
@@ -445,7 +445,7 @@ edited: Mario Blunk / Blunk electronic&lt;br /&gt;</description>
 <gate name="G$1" symbol="Z-DIODE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="_S_SOD732" package="S_SOD732">
+<device name="_S_SOD732" package="S_SOD723">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>

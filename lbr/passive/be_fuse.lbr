@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -73,6 +73,16 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="100" name="frame_development" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="101" name="frame_net_changers" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="102" name="bot_pads" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="104" name="S_DOKU" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="116" name="Patch_BOT" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="198" name="BMP198" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="250" name="Descript" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="251" name="SMDround" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <library>
 <description>fuses</description>
@@ -197,6 +207,79 @@ date: 2013-07-18</description>
 <text x="5.08" y="0.635" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
 <text x="5.08" y="-0.635" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
 </package>
+<package name="T_FUSE_HOLDER_GRID_22.5MM">
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2016-11-15</description>
+<wire x1="-12.573" y1="-4.437" x2="12.573" y2="-4.437" width="0.1524" layer="21"/>
+<wire x1="12.573" y1="4.437" x2="-12.573" y2="4.437" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-2.921" x2="5.08" y2="-2.921" width="0.0508" layer="51"/>
+<wire x1="-5.08" y1="2.921" x2="5.08" y2="2.921" width="0.0508" layer="51"/>
+<wire x1="-10.795" y1="3.683" x2="-5.715" y2="3.683" width="0.1524" layer="51"/>
+<wire x1="-10.795" y1="-3.683" x2="-10.795" y2="-3.175" width="0.1524" layer="51"/>
+<wire x1="-10.795" y1="-2.54" x2="-5.715" y2="-2.54" width="0.1524" layer="51"/>
+<wire x1="-10.795" y1="3.683" x2="-10.795" y2="2.54" width="0.1524" layer="51"/>
+<wire x1="-10.795" y1="2.54" x2="-5.715" y2="2.54" width="0.1524" layer="51"/>
+<wire x1="-5.715" y1="-3.683" x2="-10.795" y2="-3.683" width="0.1524" layer="51"/>
+<wire x1="-5.715" y1="-3.683" x2="-5.715" y2="-2.54" width="0.1524" layer="51"/>
+<wire x1="-10.795" y1="-3.683" x2="-11.43" y2="-3.683" width="0.1524" layer="51"/>
+<wire x1="-11.43" y1="-3.683" x2="-11.43" y2="-1.27" width="0.1524" layer="51"/>
+<wire x1="-11.176" y1="-1.27" x2="-11.176" y2="-3.175" width="0.1524" layer="51"/>
+<wire x1="-11.176" y1="-3.175" x2="-10.795" y2="-3.175" width="0.1524" layer="51"/>
+<wire x1="-10.795" y1="-3.175" x2="-10.795" y2="-2.54" width="0.1524" layer="51"/>
+<wire x1="-5.715" y1="2.54" x2="-5.715" y2="3.683" width="0.1524" layer="51"/>
+<wire x1="-11.43" y1="-1.27" x2="-11.176" y2="-1.27" width="0.1524" layer="51"/>
+<wire x1="10.795" y1="-3.683" x2="5.715" y2="-3.683" width="0.1524" layer="51"/>
+<wire x1="10.795" y1="3.683" x2="10.795" y2="3.175" width="0.1524" layer="51"/>
+<wire x1="10.795" y1="2.54" x2="5.715" y2="2.54" width="0.1524" layer="51"/>
+<wire x1="10.795" y1="-3.683" x2="10.795" y2="-2.54" width="0.1524" layer="51"/>
+<wire x1="10.795" y1="-2.54" x2="5.715" y2="-2.54" width="0.1524" layer="51"/>
+<wire x1="5.715" y1="3.683" x2="10.795" y2="3.683" width="0.1524" layer="51"/>
+<wire x1="5.715" y1="3.683" x2="5.715" y2="2.54" width="0.1524" layer="51"/>
+<wire x1="10.795" y1="3.683" x2="11.43" y2="3.683" width="0.1524" layer="51"/>
+<wire x1="11.43" y1="3.683" x2="11.43" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="11.176" y1="1.27" x2="11.176" y2="3.175" width="0.1524" layer="51"/>
+<wire x1="11.176" y1="3.175" x2="10.795" y2="3.175" width="0.1524" layer="51"/>
+<wire x1="10.795" y1="3.175" x2="10.795" y2="2.54" width="0.1524" layer="51"/>
+<wire x1="5.715" y1="-2.54" x2="5.715" y2="-3.683" width="0.1524" layer="51"/>
+<wire x1="11.43" y1="1.27" x2="11.176" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="-5.207" y1="0" x2="5.207" y2="0" width="0.0508" layer="51"/>
+<wire x1="12.573" y1="4.437" x2="12.573" y2="2.151" width="0.1524" layer="21"/>
+<wire x1="12.573" y1="-1.651" x2="12.573" y2="1.651" width="0.1524" layer="51"/>
+<wire x1="12.573" y1="-2.151" x2="12.573" y2="-4.437" width="0.1524" layer="21"/>
+<wire x1="-12.573" y1="4.437" x2="-12.573" y2="2.151" width="0.1524" layer="21"/>
+<wire x1="-12.573" y1="-1.651" x2="-12.573" y2="1.651" width="0.1524" layer="51"/>
+<wire x1="-12.573" y1="-2.151" x2="-12.573" y2="-4.437" width="0.1524" layer="21"/>
+<wire x1="-13" y1="5" x2="13" y2="5" width="0.15" layer="39"/>
+<wire x1="13" y1="5" x2="13" y2="-5" width="0.15" layer="39"/>
+<wire x1="13" y1="-5" x2="-13" y2="-5" width="0.15" layer="39"/>
+<wire x1="-13" y1="-5" x2="-13" y2="5" width="0.15" layer="39"/>
+<rectangle x1="-10.541" y1="-2.032" x2="-10.16" y2="2.032" layer="51"/>
+<rectangle x1="-10.541" y1="1.905" x2="-9.652" y2="2.032" layer="51"/>
+<rectangle x1="-10.541" y1="-2.032" x2="-9.652" y2="-1.905" layer="51"/>
+<rectangle x1="-5.715" y1="-3.175" x2="-5.08" y2="-2.032" layer="51"/>
+<rectangle x1="-5.715" y1="2.032" x2="-5.08" y2="3.175" layer="51"/>
+<rectangle x1="-5.715" y1="-2.032" x2="-5.08" y2="2.032" layer="51"/>
+<rectangle x1="10.16" y1="-2.032" x2="10.541" y2="2.032" layer="51"/>
+<rectangle x1="9.652" y1="-2.032" x2="10.541" y2="-1.905" layer="51"/>
+<rectangle x1="9.652" y1="1.905" x2="10.541" y2="2.032" layer="51"/>
+<rectangle x1="5.08" y1="2.032" x2="5.715" y2="3.175" layer="51"/>
+<rectangle x1="5.08" y1="-3.175" x2="5.715" y2="-2.032" layer="51"/>
+<rectangle x1="5.08" y1="-2.032" x2="5.715" y2="2.032" layer="51"/>
+<rectangle x1="-5.08" y1="2.159" x2="5.08" y2="2.667" layer="51"/>
+<rectangle x1="-5.08" y1="-2.667" x2="5.08" y2="-2.159" layer="51"/>
+<rectangle x1="5.715" y1="-2.032" x2="9.652" y2="-1.905" layer="51"/>
+<rectangle x1="5.715" y1="1.905" x2="9.652" y2="2.032" layer="51"/>
+<rectangle x1="-9.652" y1="1.905" x2="-5.715" y2="2.032" layer="51"/>
+<rectangle x1="-9.652" y1="-2.032" x2="-5.715" y2="-1.905" layer="51"/>
+<rectangle x1="-10.541" y1="-2.54" x2="-5.715" y2="-2.032" layer="51"/>
+<rectangle x1="-10.541" y1="2.032" x2="-5.715" y2="2.54" layer="51"/>
+<rectangle x1="5.715" y1="2.032" x2="10.541" y2="2.54" layer="51"/>
+<rectangle x1="5.715" y1="-2.54" x2="10.541" y2="-2.032" layer="51"/>
+<pad name="1" x="-11.2522" y="0" drill="1.5" diameter="2.54" shape="long" rot="R90"/>
+<pad name="2" x="11.2522" y="0" drill="1.5" diameter="2.54" shape="long" rot="R90"/>
+<text x="-12" y="-6.5" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
+<text x="-12" y="-8" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="FUSE">
@@ -231,9 +314,8 @@ date: 2015-02-16</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="FUSE" prefix="F" uservalue="yes">
-<description>SMF Fuse Block, Littlefuse&lt;br&gt;
-edited: Mario Blunk / Blunk electronic</description>
+<deviceset name="FUSE" prefix="FH" uservalue="yes">
+<description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
 <gate name="G$1" symbol="FUSE" x="0" y="0"/>
 </gates>
@@ -254,7 +336,7 @@ edited: Mario Blunk / Blunk electronic</description>
 </technology>
 </technologies>
 </device>
-<device name="-T" package="T_FUSE_HOLDER_KEYSTONE_PART_CODE_3552">
+<device name="_T" package="T_FUSE_HOLDER_KEYSTONE_PART_CODE_3552">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -265,6 +347,22 @@ edited: Mario Blunk / Blunk electronic</description>
 <attribute name="COMMISSIONED" value="2013-08-30"/>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="F_PAC_T_FUSE_HOLDER_KEYSTONE_PART_CODE_3552_VAL_" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="UPDATED" value=""/>
+</technology>
+</technologies>
+</device>
+<device name="_T_FUSE_HOLDER_GRID_22.5MM" package="T_FUSE_HOLDER_GRID_22.5MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BOM" value="YES"/>
+<attribute name="COMMISSIONED" value="2016-11-15"/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="FH_PAC_T_HOLDER_GRID_22.5mm" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>

@@ -12,6 +12,8 @@
 # - default ratio in brd and pac changed from 13 to 15 percent / Mario Blunk / Blunk electronic
 # 2014-11-20:
 # - default ratio in brd and pac changed from 15 to 13 percent / Mario Blunk / Blunk electronic
+# 2017-09-25
+# - commented menu buttons
 
 BRD:
 GRI mm;
@@ -41,10 +43,10 @@ layer 54 bCopper;
 
 #SET vector_font on
 
-MENU 'Tools {\
-		New Page : | \
-		Make Net/Partlist : | \
-			}';
+# MENU 'Tools {\
+# 		New Page : | \
+# 		Make Net/Partlist : | \
+# 			}';
 
 
 #
@@ -68,12 +70,12 @@ SET AUTO_JUNCTION ON;
 #CLASS 2 supply;
 #CLASS 3 hv;
 
-MENU 'Tools {\
-		#New Page : SCR new_page; | \
-		Renumber Devices : RUN renumber-sheet.ulp -i 0 -n 100 -p TPX; | \
-		Make BOM : RUN bom.ulp; | \
-		#Make Net/Partlist : SCR make_net_part_list; | \
-			}';
+# MENU 'Tools {\
+# 		#New Page : SCR new_page; | \
+# 		Renumber Devices : RUN renumber-sheet.ulp -i 0 -n 100 -p TPX; | \
+# 		Make BOM : RUN bom.ulp; | \
+# 		#Make Net/Partlist : SCR make_net_part_list; | \
+# 			}';
 
 
 #

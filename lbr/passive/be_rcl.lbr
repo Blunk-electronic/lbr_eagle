@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.2" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -216,10 +216,8 @@ date: 2013-12-11</description>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
 <package name="S_RADIAL_10MM">
-<description>capacitor package 10mm radial&lt;br&gt;
-vishay case codes: 1010, 1014&lt;br&gt;
-drawn: Mario Blunk / Blunk electronic &lt;br&gt;
-date: 2013-11-14</description>
+<description>edited: Mario Blunk&lt;br&gt;
+date: 2018-05-28</description>
 <wire x1="5.5" y1="4" x2="4" y2="5.5" width="0.15" layer="21"/>
 <wire x1="4" y1="5.5" x2="-5.5" y2="5.5" width="0.15" layer="21"/>
 <wire x1="5.5" y1="-4.5" x2="4.5" y2="-5.5" width="0.15" layer="21"/>
@@ -855,7 +853,7 @@ date: 2015-02-16</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="R_EU" prefix="R" uservalue="yes">
+<deviceset name="R" prefix="R" uservalue="yes">
 <description>Resistor Device EU &lt;br&gt;
 drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <gates>
@@ -992,7 +990,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C_EU" prefix="C" uservalue="yes">
+<deviceset name="C" prefix="C" uservalue="yes">
 <description>drawn: Mario Blunk / Blunk electronic &lt;br&gt;</description>
 <gates>
 <gate name="G$1" symbol="C_EU" x="0" y="0"/>
@@ -1096,7 +1094,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="L_EU" prefix="L" uservalue="yes">
+<deviceset name="L" prefix="L" uservalue="yes">
 <description>drawn: Mario Blunk / Blunk electronic &lt;br&gt;</description>
 <gates>
 <gate name="G$1" symbol="L_EU" x="0" y="0"/>
@@ -1136,7 +1134,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C_POL_EU" prefix="C" uservalue="yes">
+<deviceset name="C_POL" prefix="C" uservalue="yes">
 <description>drawn: Mario Blunk / Blunk electronic &lt;br&gt;</description>
 <gates>
 <gate name="G$1" symbol="C_POL_EU" x="0" y="0"/>
@@ -1272,7 +1270,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="R_EU_TRIM" prefix="R" uservalue="yes">
+<deviceset name="RA" prefix="R" uservalue="yes">
 <description>drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <gates>
 <gate name="G$1" symbol="R_EU_TRIM" x="0" y="0"/>
@@ -1314,7 +1312,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="R_EU_ARRAY_1C_8" prefix="RN" uservalue="yes">
+<deviceset name="RN_1C_8" prefix="RN" uservalue="yes">
 <description>edited: Mario Blunk</description>
 <gates>
 <gate name="G$1" symbol="R_EU_ARRAY_1C_8" x="0" y="0"/>
@@ -1345,7 +1343,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="R_EU_ARRAY_4" prefix="RN" uservalue="yes">
+<deviceset name="RN_4" prefix="RN" uservalue="yes">
 <description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
 <gate name="A" symbol="R_EU_ARRAY_1_OF_X" x="0" y="17.78" swaplevel="1"/>

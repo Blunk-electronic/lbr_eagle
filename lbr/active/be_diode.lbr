@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -73,10 +73,16 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="100" name="frame_development" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="101" name="frame_net_changers" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="102" name="bot_pads" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="104" name="S_DOKU" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="116" name="Patch_BOT" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="198" name="BMP198" color="7" fill="1" visible="no" active="no"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="no" active="no"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
+<layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <library>
 <description>diodes</description>
@@ -219,6 +225,27 @@ date: 2015-10-16</description>
 <text x="-3" y="-4.5" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
 <wire x1="-9" y1="0" x2="-3" y2="0" width="0.15" layer="51"/>
 <wire x1="3" y1="0" x2="9" y2="0" width="0.15" layer="51"/>
+</package>
+<package name="S_SOD123">
+<description>edited: Mario Blunk&lt;br&gt;
+date: 2018-05-28</description>
+<wire x1="-1.45" y1="0.85" x2="-0.85" y2="0.85" width="0.15" layer="51"/>
+<wire x1="-0.85" y1="0.85" x2="1.45" y2="0.85" width="0.15" layer="51"/>
+<wire x1="1.45" y1="0.85" x2="1.45" y2="-0.85" width="0.15" layer="51"/>
+<wire x1="1.45" y1="-0.85" x2="-0.85" y2="-0.85" width="0.15" layer="51"/>
+<wire x1="-0.85" y1="-0.85" x2="-1.45" y2="-0.85" width="0.15" layer="51"/>
+<wire x1="-1.45" y1="-0.85" x2="-1.45" y2="0.85" width="0.15" layer="51"/>
+<smd name="C" x="-1.7" y="0" dx="0.9" dy="0.9" layer="1"/>
+<smd name="A" x="1.7" y="0" dx="0.9" dy="0.9" layer="1"/>
+<text x="-2.3" y="1.1" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
+<text x="-2.7" y="-2.1" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
+<wire x1="-2.3" y1="1" x2="2.3" y2="1" width="0.2" layer="39"/>
+<wire x1="2.3" y1="1" x2="2.3" y2="-1" width="0.2" layer="39"/>
+<wire x1="2.3" y1="-1" x2="-2.3" y2="-1" width="0.2" layer="39"/>
+<wire x1="-2.3" y1="-1" x2="-2.3" y2="1" width="0.2" layer="39"/>
+<wire x1="-0.85" y1="-0.85" x2="-0.85" y2="0.85" width="0.15" layer="51"/>
+<rectangle x1="1.5" y1="-0.3" x2="1.9" y2="0.3" layer="51"/>
+<rectangle x1="-1.9" y1="-0.3" x2="-1.5" y2="0.3" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -406,6 +433,22 @@ date: 2015-02-16</description>
 <attribute name="COMMISSIONED" value="2015-10-16"/>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="D_PAC_T_DO201_GRID_18MM_VAL_" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="UPDATED" value=""/>
+</technology>
+</technologies>
+</device>
+<device name="S_SOD123" package="S_SOD123">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BOM" value="YES"/>
+<attribute name="COMMISSIONED" value="2018-05-28"/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="D_PAC_S_SOD123_VAL_1N4148W" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>

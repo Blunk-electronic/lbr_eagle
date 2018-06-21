@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -314,8 +314,8 @@ date: 2016-11-16</description>
 <deviceset name="MAX962" prefix="IC">
 <description>drawn: Mario Blunk</description>
 <gates>
-<gate name="A" symbol="OP" x="-15.24" y="15.24"/>
-<gate name="B" symbol="OP" x="-15.24" y="-10.16"/>
+<gate name="A" symbol="OP" x="-15.24" y="15.24" swaplevel="1"/>
+<gate name="B" symbol="OP" x="-15.24" y="-10.16" swaplevel="1"/>
 <gate name="P" symbol="PWR" x="10.16" y="0" addlevel="request"/>
 </gates>
 <devices>
@@ -337,7 +337,7 @@ date: 2016-11-16</description>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="IC_PAC_S_SO8_VAL_MAX962ESA" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
-<attribute name="UPDATED" value=""/>
+<attribute name="UPDATED" value="2018-05-31"/>
 </technology>
 </technologies>
 </device>

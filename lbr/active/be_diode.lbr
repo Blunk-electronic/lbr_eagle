@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -112,10 +112,9 @@ date: 2013-03-25</description>
 <wire x1="1.8" y1="-2.2" x2="-1.8" y2="-2.2" width="0.2" layer="39"/>
 <wire x1="-1.8" y1="-2.2" x2="-1.8" y2="2.2" width="0.2" layer="39"/>
 </package>
-<package name="S_DO-214AC">
-<description>DO-214AC package&lt;br /&gt;
-edited: Mario Blunk / Blunk electronic&lt;br /&gt;
-date: 2013-03-26</description>
+<package name="S_DO214AC">
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2018-07-02</description>
 <wire x1="-2.3" y1="1.25" x2="2.3" y2="1.25" width="0.254" layer="51"/>
 <wire x1="2.3" y1="1.25" x2="2.3" y2="-1.25" width="0.254" layer="51"/>
 <wire x1="2.3" y1="-1.25" x2="-2.3" y2="-1.25" width="0.254" layer="51"/>
@@ -390,7 +389,7 @@ date: 2015-02-16</description>
 <gate name="G$1" symbol="DIODE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="_S_DO214AC" package="S_DO-214AC">
+<device name="_S_DO214AC" package="S_DO214AC">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>

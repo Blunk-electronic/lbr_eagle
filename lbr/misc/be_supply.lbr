@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -74,19 +74,15 @@
 </packages>
 <symbols>
 <symbol name="GND">
-<description>GND supply symbol&lt;br&gt;
-edited: Mario Blunk / Blunk electronic&lt;br&gt;
-date: 2013-03-25&lt;br&gt;
-edited: 2013-07-16 : all fonts changed to "fixed" / Mario Blunk</description>
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2013-03-25</description>
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 <text x="-1.778" y="-1.905" size="1.27" layer="96" font="fixed">&gt;VALUE</text>
 </symbol>
 <symbol name="AGND">
-<description>AGND supply symbol&lt;br&gt;
-edited: Mario Blunk / Blunk electronic&lt;br&gt;
-date: 2013-03-25&lt;br&gt;
-edited: 2013-07-16 : all fonts changed to "fixed" / Mario Blunk</description>
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2013-03-25</description>
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <wire x1="-1.0922" y1="-0.508" x2="1.0922" y2="-0.508" width="0.254" layer="94"/>
 <pin name="AGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
@@ -127,8 +123,7 @@ date: 2015-06-03</description>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
-<description>GND supply device&lt;br&gt;
-edited: Mario Blunk / Blunk electronic&lt;br&gt;</description>
+<description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
 </gates>
@@ -139,8 +134,7 @@ edited: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <attribute name="BOM" value="NO"/>
 <attribute name="COMMISSIONED" value="2013-08-30"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_CAM" value="" constant="no"/>
-<attribute name="PART_CODE_JEN" value="" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>
 </technologies>
@@ -148,8 +142,7 @@ edited: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 </devices>
 </deviceset>
 <deviceset name="AGND" prefix="AGND">
-<description>AGND supply device&lt;br&gt;
-edited: Mario Blunk / Blunk electronic&lt;br&gt;</description>
+<description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
 <gate name="VR1" symbol="AGND" x="0" y="0"/>
 </gates>
@@ -160,8 +153,7 @@ edited: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <attribute name="BOM" value="NO"/>
 <attribute name="COMMISSIONED" value="2013-08-30"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_CAM" value="" constant="no"/>
-<attribute name="PART_CODE_JEN" value="" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>
 </technologies>

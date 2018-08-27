@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -833,6 +833,34 @@ date: 2015-10-14</description>
 <attribute name="PART_CODE_BEL" value="IC_PAC_T_NDIP14_VAL_SN74LS95A" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="D" package="S_SO14">
+<connects>
+<connect gate="G$1" pin="C1" pad="9"/>
+<connect gate="G$1" pin="C2" pad="8"/>
+<connect gate="G$1" pin="DA" pad="2"/>
+<connect gate="G$1" pin="DB" pad="3"/>
+<connect gate="G$1" pin="DC" pad="4"/>
+<connect gate="G$1" pin="DD" pad="5"/>
+<connect gate="G$1" pin="DS" pad="1"/>
+<connect gate="G$1" pin="MC" pad="6"/>
+<connect gate="G$1" pin="QA" pad="13"/>
+<connect gate="G$1" pin="QB" pad="12"/>
+<connect gate="G$1" pin="QC" pad="11"/>
+<connect gate="G$1" pin="QD" pad="10"/>
+<connect gate="P" pin="GND" pad="7"/>
+<connect gate="P" pin="VCC" pad="14"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BOM" value=""/>
+<attribute name="COMMISSIONED" value=""/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="UPDATED" value=""/>
 </technology>
 </technologies>
 </device>

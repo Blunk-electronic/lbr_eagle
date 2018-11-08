@@ -1040,7 +1040,7 @@ date: 2018-09-16</description>
 <deviceset name="74175" prefix="IC">
 <description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
-<gate name="G$1" symbol="74175" x="-5.08" y="0" addlevel="request"/>
+<gate name="G$1" symbol="74175" x="-5.08" y="0"/>
 <gate name="P" symbol="PWR" x="27.94" y="0" addlevel="request"/>
 </gates>
 <devices>

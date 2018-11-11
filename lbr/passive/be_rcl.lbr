@@ -781,6 +781,29 @@ date: 2018-08-13</description>
 <wire x1="11" y1="-11" x2="-11" y2="-11" width="0.15" layer="39"/>
 <wire x1="-11" y1="-11" x2="-11" y2="11" width="0.15" layer="39"/>
 </package>
+<package name="T_TRIM_PIHER_PT10_HORIZONTAL">
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2018-11-11</description>
+<circle x="0" y="0" radius="1.4" width="0.15" layer="51"/>
+<text x="3.5" y="1.5" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
+<text x="3.5" y="0" size="1" layer="27" font="vector" ratio="13">&gt;VALUE</text>
+<pad name="B" x="-2.5" y="-5" drill="1.4" shape="square"/>
+<pad name="A" x="2.5" y="-5" drill="1.4" shape="square"/>
+<pad name="W" x="0" y="5" drill="1.4" shape="square"/>
+<circle x="0" y="0" radius="5.3" width="0.15" layer="51"/>
+<wire x1="-5.2" y1="-1.2" x2="-5.2" y2="-5.6" width="0.15" layer="21"/>
+<wire x1="-5.2" y1="-5.6" x2="-4" y2="-5.6" width="0.15" layer="21"/>
+<wire x1="4" y1="-5.6" x2="5.2" y2="-5.6" width="0.15" layer="21"/>
+<wire x1="5.2" y1="-5.6" x2="5.2" y2="-1.2" width="0.15" layer="21"/>
+<wire x1="-3.9" y1="-3.6" x2="-1.8" y2="5" width="0.15" layer="21" curve="-112.910514"/>
+<wire x1="1.8" y1="5" x2="3.9" y2="-3.6" width="0.15" layer="21" curve="-112.910514"/>
+<wire x1="-3" y1="6" x2="-6" y2="3" width="0.15" layer="39"/>
+<wire x1="-6" y1="3" x2="-6" y2="-7" width="0.15" layer="39"/>
+<wire x1="-6" y1="-7" x2="6" y2="-7" width="0.15" layer="39"/>
+<wire x1="6" y1="-7" x2="6" y2="3" width="0.15" layer="39"/>
+<wire x1="6" y1="3" x2="3" y2="6" width="0.15" layer="39"/>
+<wire x1="3" y1="6" x2="-3" y2="6" width="0.15" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="R">
@@ -1449,7 +1472,7 @@ date: 2015-02-16</description>
 </devices>
 </deviceset>
 <deviceset name="RA" prefix="R" uservalue="yes">
-<description>drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
+<description>edited: Mario Blunk / Blunk electronic</description>
 <gates>
 <gate name="G$1" symbol="R_TRIM" x="0" y="0"/>
 </gates>
@@ -1500,6 +1523,23 @@ date: 2015-02-16</description>
 <attribute name="COMMISSIONED" value="2018-08-13"/>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="R_PAC_T_TRIM_BOURNS_3296W_VAL_" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="UPDATED" value=""/>
+</technology>
+</technologies>
+</device>
+<device name="_T_PT10_HORIZONTAL" package="T_TRIM_PIHER_PT10_HORIZONTAL">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="W" pad="W"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BOM" value="YES"/>
+<attribute name="COMMISSIONED" value="2018-11-11"/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="R_PAC_T_TRIM_PIHER_PT10_HORIZONTAL_VAL_" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>

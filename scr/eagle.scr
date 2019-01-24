@@ -7,14 +7,6 @@
 
 #
 # everything that shall be executed in the Layout editor
-#
-# 2014-09-25:
-# - default ratio in brd and pac changed from 13 to 15 percent / Mario Blunk / Blunk electronic
-# 2014-11-20:
-# - default ratio in brd and pac changed from 15 to 13 percent / Mario Blunk / Blunk electronic
-# 2017-09-25
-# - commented menu buttons
-
 BRD:
 GRI mm;
 GRI 1;
@@ -69,6 +61,14 @@ SET AUTO_JUNCTION ON;
 #CLASS 1 gnd;
 #CLASS 2 supply;
 #CLASS 3 hv;
+
+#unuse all libraries incl managed libraries
+use -*;
+
+#use custom libraries only
+use ../../lbr_eagle/lbr/misc/*
+use ../../lbr_eagle/lbr/active/*
+use ../../lbr_eagle/lbr/passive/*
 
 # MENU 'Tools {\
 # 		#New Page : SCR new_page; | \

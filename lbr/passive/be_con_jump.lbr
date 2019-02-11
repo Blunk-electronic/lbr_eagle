@@ -1625,10 +1625,9 @@ edited: 2014-01-02</description>
 <circle x="0" y="0" radius="1.775" width="1.45" layer="41"/>
 <circle x="32.62" y="0" radius="1.775" width="1.45" layer="41"/>
 </package>
-<package name="T_MALE_2X5_VERTICAL_1.27MM">
-<description>pitch /grid : 1.27mm / 0.05 inch&lt;br&gt;
-drawn: Mario Blunk / Blunk electronic&lt;br&gt;
-edited: 2014-01-06</description>
+<package name="T_MALE_2X5_VERTICAL_PITCH_1MM27">
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2019-02-11</description>
 <pad name="1" x="-2.54" y="0.635" drill="0.7" diameter="1.05" shape="square"/>
 <pad name="2" x="-2.54" y="-0.635" drill="0.7" diameter="1.05" shape="octagon"/>
 <text x="-3" y="4" size="1" layer="25" font="vector" ratio="13">&gt;NAME</text>
@@ -1667,9 +1666,9 @@ edited: 2014-01-06</description>
 <wire x1="-3.175" y1="-1.3525" x2="-3.175" y2="1.3525" width="0.15" layer="51"/>
 <text x="-4.1" y="0.3" size="0.8" layer="21" font="vector" ratio="13">1</text>
 </package>
-<package name="T_MALE_2X5_VERTICAL_GRID_2.54MM">
+<package name="T_MALE_2X5_VERTICAL_PITCH_2MM54">
 <description>edited: Mario Blunk&lt;br /&gt;
-date: 2014-10-14</description>
+date: 2019-02-11</description>
 <wire x1="-6.35" y1="-1.905" x2="-5.715" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-4.445" y1="-2.54" x2="-3.81" y2="-1.905" width="0.1524" layer="21"/>
 <wire x1="-3.81" y1="-1.905" x2="-3.175" y2="-2.54" width="0.1524" layer="21"/>
@@ -3987,9 +3986,9 @@ date: 2015-01-28</description>
 <rectangle x1="30.226" y1="1.016" x2="30.734" y2="1.524" layer="51"/>
 <rectangle x1="30.226" y1="-1.524" x2="30.734" y2="-1.016" layer="51"/>
 </package>
-<package name="T_MALE_2X13_VERTICAL_GRID_2.54MM">
+<package name="T_MALE_2X13_VERTICAL_PITCH_2MM54">
 <description>edited: Mario Blunk&lt;br&gt;
-date: 2015-02-03</description>
+date: 2019-02-11</description>
 <wire x1="-16.47" y1="-1.905" x2="-15.835" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-14.565" y1="-2.54" x2="-13.93" y2="-1.905" width="0.1524" layer="21"/>
 <wire x1="-13.93" y1="-1.905" x2="-13.295" y2="-2.54" width="0.1524" layer="21"/>
@@ -7378,7 +7377,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <gate name="G$1" symbol="MALE_2X5" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-T-VERTICAL_1,27MM" package="T_MALE_2X5_VERTICAL_1.27MM">
+<device name="-T-VERTICAL_1MM27" package="T_MALE_2X5_VERTICAL_PITCH_1MM27">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
@@ -7396,13 +7395,13 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <attribute name="BOM" value="YES"/>
 <attribute name="COMMISSIONED" value="2013-12-16"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_BEL" value="X_PAC_T_MALE_2X5_VERTICAL_1.27mm" constant="no"/>
+<attribute name="PART_CODE_BEL" value="X_PAC_T_MALE_2X5_VERTICAL_PITCH_1mm27" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>
 </technologies>
 </device>
-<device name="-T-VERTICAL_2.54MM" package="T_MALE_2X5_VERTICAL_GRID_2.54MM">
+<device name="-T-VERTICAL_2MM54" package="T_MALE_2X5_VERTICAL_PITCH_2MM54">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
@@ -7420,7 +7419,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <attribute name="BOM" value="YES"/>
 <attribute name="COMMISSIONED" value="2013-12-16"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_BEL" value="X_PAC_T_MALE_2X5_VERTICAL_GRID_2.54MM" constant="no"/>
+<attribute name="PART_CODE_BEL" value="X_PAC_T_MALE_2X5_VERTICAL_PITCH_2mm54" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>
@@ -8325,7 +8324,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <gate name="G$1" symbol="MALE_2X13" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-T-VERTICAL_2.54MM" package="T_MALE_2X13_VERTICAL_GRID_2.54MM">
+<device name="-T-VERTICAL_PITCH_2MM54" package="T_MALE_2X13_VERTICAL_PITCH_2MM54">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
@@ -8359,7 +8358,7 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <attribute name="BOM" value="YES"/>
 <attribute name="COMMISSIONED" value="2015-02-03"/>
 <attribute name="FUNCTION" value="" constant="no"/>
-<attribute name="PART_CODE_BEL" value="X_PAC_T_MALE_2X13_VERTICAL_GRID_2.54mm" constant="no"/>
+<attribute name="PART_CODE_BEL" value="X_PAC_T_MALE_2X13_VERTICAL_PITCH_2mm54" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>

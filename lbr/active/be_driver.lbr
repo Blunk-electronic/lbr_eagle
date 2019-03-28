@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -915,6 +915,31 @@ date: 2015-06-03</description>
 <text x="-1.27" y="0.635" size="1.27" layer="94" font="fixed">VCC</text>
 <text x="-1.27" y="-1.905" size="1.27" layer="94" font="fixed">GND</text>
 </symbol>
+<symbol name="SN7447">
+<description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2019-03-17</description>
+<wire x1="-12.7" y1="20.32" x2="12.7" y2="20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="20.32" x2="12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-20.32" x2="-12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-20.32" x2="-12.7" y2="20.32" width="0.254" layer="94"/>
+<text x="-5.08" y="17.78" size="1.27" layer="94" font="fixed">BIN/7-SEG</text>
+<pin name="A" x="-17.78" y="-15.24" length="middle"/>
+<pin name="B" x="-17.78" y="-12.7" length="middle"/>
+<pin name="C" x="-17.78" y="-10.16" length="middle"/>
+<pin name="D" x="-17.78" y="-7.62" length="middle"/>
+<pin name="BI_RBO_N" x="-17.78" y="15.24" length="middle"/>
+<pin name="RBI_N" x="-17.78" y="12.7" length="middle"/>
+<pin name="LT_N" x="-17.78" y="10.16" length="middle"/>
+<pin name="SEG_A" x="17.78" y="-15.24" length="middle" rot="R180"/>
+<pin name="SEG_B" x="17.78" y="-10.16" length="middle" rot="R180"/>
+<pin name="SEG_C" x="17.78" y="-5.08" length="middle" rot="R180"/>
+<pin name="SEG_D" x="17.78" y="0" length="middle" rot="R180"/>
+<pin name="SEG_E" x="17.78" y="5.08" length="middle" rot="R180"/>
+<pin name="SEG_F" x="17.78" y="10.16" length="middle" rot="R180"/>
+<pin name="SEG_G" x="17.78" y="15.24" length="middle" rot="R180"/>
+<text x="-12.7" y="-22.225" size="1.27" layer="95" font="fixed">&gt;NAME</text>
+<text x="-12.7" y="-24.13" size="1.27" layer="96" font="fixed">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="SN74*125" prefix="IC">
@@ -1327,6 +1352,26 @@ date: 2014-09-03</description>
 <attribute name="COMMISSIONED" value="2015-06-03"/>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="IC_PAC_T_NDIP16_VAL_CA3161E" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="UPDATED" value=""/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="74*47" prefix="IC" uservalue="yes">
+<gates>
+<gate name="G$2" symbol="PWR" x="25.4" y="0"/>
+<gate name="G$1" symbol="BCD-TO-7SEG" x="-10.16" y="0"/>
+</gates>
+<devices>
+<device name="N" package="T_NDIP16">
+<technologies>
+<technology name="">
+<attribute name="BOM" value="YES"/>
+<attribute name="COMMISSIONED" value="2019-03-17"/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="IC_PAC_T_NDIP16_VAL_" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>

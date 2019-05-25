@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -60,7 +60,7 @@
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="HEIGHT" color="11" fill="1" visible="no" active="no"/>
@@ -921,13 +921,11 @@ date: 2019-05-20</description>
 </package>
 <package name="S_NET_CHANGER_0.15MM">
 <description>used to connect nets with different names&lt;br&gt;
-NOTE 1: Export additional layer 53/54 when generating CAM files !&lt;br&gt;
-NOTE 2: Optionally delete name tag in layout, to remove it from silk screen !&lt;br&gt;
-drawn: Mario Blunk / Blunk electronic&lt;br&gt;
-edited: 2014-11-06</description>
+IMPORTANT: Export additional layers 53/54 when generating CAM files !
+edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2019-05-26</description>
 <smd name="1" x="-0.3" y="0" dx="0.15" dy="0.3" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="2" x="0.3" y="0" dx="0.15" dy="0.3" layer="1" rot="R90" stop="no" cream="no"/>
-<text x="-1" y="0.2" size="0.5" layer="25" font="vector" ratio="13">&gt;NAME</text>
 <wire x1="-0.47" y1="0.09" x2="0.47" y2="0.09" width="0" layer="41"/>
 <wire x1="-0.47" y1="-0.09" x2="0.47" y2="-0.09" width="0" layer="41"/>
 <wire x1="-0.2" y1="0" x2="0.2" y2="0" width="0.15" layer="53"/>
@@ -2973,13 +2971,11 @@ FOR CABLE !</text>
 </package>
 <package name="S_NET_CHANGER_0.3MM">
 <description>used to connect nets with different names&lt;br&gt;
-NOTE 1: Export additional layer 53/54 when generating CAM files !&lt;br&gt;
-NOTE 2: Optionally delete name tag in layout, to remove it from silk screen !&lt;br&gt;
-drawn: Mario Blunk / Blunk electronic&lt;br&gt;
-edited: 2014-11-06</description>
+IMPORTANT: Export additional layers 53/54 when generating CAM files !
+edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2019-05-26</description>
 <smd name="1" x="-0.3" y="0" dx="0.3" dy="0.3" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="2" x="0.3" y="0" dx="0.3" dy="0.3" layer="1" rot="R90" stop="no" cream="no"/>
-<text x="-1.1" y="0.3" size="0.5" layer="25" font="vector" ratio="13">&gt;NAME</text>
 <wire x1="-0.44" y1="0.16" x2="0.44" y2="0.16" width="0" layer="41"/>
 <wire x1="-0.44" y1="-0.16" x2="0.44" y2="-0.16" width="0" layer="41"/>
 <wire x1="-0.2" y1="0" x2="0.2" y2="0" width="0.3" layer="53"/>
@@ -4154,13 +4150,11 @@ date: 2019-02-11</description>
 </package>
 <package name="S_NET_CHANGER_1MM">
 <description>used to connect nets with different names&lt;br&gt;
-NOTE 1: Export additional layer 53/54 when generating CAM files !&lt;br&gt;
-NOTE 2: Optionally delete name tag in layout, to remove it from silk screen !&lt;br&gt;
-drawn: Mario Blunk / Blunk electronic&lt;br&gt;
-edited: 2014-11-13</description>
+IMPORTANT: Export additional layers 53/54 when generating CAM files !
+edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2019-05-26</description>
 <smd name="1" x="-0.6" y="0" dx="1" dy="1" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="2" x="0.6" y="0" dx="1" dy="1" layer="1" rot="R90" stop="no" cream="no"/>
-<text x="-1.1" y="0.6" size="0.5" layer="25" font="vector" ratio="13">&gt;NAME</text>
 <wire x1="-1.04" y1="0.56" x2="1.04" y2="0.56" width="0" layer="41"/>
 <wire x1="-0.2" y1="0" x2="0.2" y2="0" width="1" layer="53"/>
 <wire x1="-1.04" y1="-0.54" x2="1.04" y2="-0.54" width="0" layer="41"/>
@@ -4347,6 +4341,17 @@ date: 2019-05-16</description>
 <rectangle x1="-6.731" y1="4.635" x2="-5.969" y2="5.143" layer="21"/>
 <rectangle x1="-6.731" y1="1.079" x2="-5.969" y2="2.095" layer="21"/>
 <wire x1="-12" y1="12" x2="12" y2="12" width="0.15" layer="51" style="dashdot"/>
+</package>
+<package name="S_AGND_CONNECTOR_2MM">
+<description>used to connect AGND with GND&lt;br&gt;
+IMPORTANT: Export additional layers 53/54 when generating CAM files !
+edited: Mario Blunk / Blunk electronic&lt;br&gt;
+date: 2019-05-26</description>
+<smd name="1" x="-0.6" y="0" dx="2" dy="1" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="2" x="0.6" y="0" dx="2" dy="1" layer="1" rot="R90" stop="no" cream="no"/>
+<rectangle x1="-0.5" y1="-1" x2="0.5" y2="1" layer="53"/>
+<rectangle x1="-0.2" y1="1" x2="0.2" y2="1.15" layer="41"/>
+<rectangle x1="-0.2" y1="-1.15" x2="0.2" y2="-1" layer="41"/>
 </package>
 </packages>
 <symbols>
@@ -8613,6 +8618,30 @@ drawn: Mario Blunk / Blunk electronic&lt;br&gt;</description>
 <attribute name="COMMISSIONED" value="2014-11-13"/>
 <attribute name="FUNCTION" value="" constant="no"/>
 <attribute name="PART_CODE_BEL" value="N_PAC_S_NET_CHANGER_1MM" constant="no"/>
+<attribute name="PART_CODE_EXT" value="" constant="no"/>
+<attribute name="UPDATED" value=""/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AGND_CONNECTOR" prefix="N">
+<description>edited: Mario Blunk / Blunk electronic</description>
+<gates>
+<gate name="G$1" symbol="NET_CHANGER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="2MM" package="S_AGND_CONNECTOR_2MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BOM" value="NO"/>
+<attribute name="COMMISSIONED" value="2019-05-25"/>
+<attribute name="FUNCTION" value="" constant="no"/>
+<attribute name="PART_CODE_BEL" value="" constant="no"/>
 <attribute name="PART_CODE_EXT" value="" constant="no"/>
 <attribute name="UPDATED" value=""/>
 </technology>

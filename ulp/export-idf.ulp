@@ -1,29 +1,11 @@
 #usage "<b>Generate IDF files from CADSoft Eagle</b><p>\n"
 "Run ULP on board file to generate IDF board and library files for import to CAD tools.<BR>"
-"Version: 0.1 - Development Started - 12-8-13<br/>"
-"Version: 0.2 - Bug fix and cleanup - 12-21-13<br/>"
-"Version: 0.3 - Added in logic to lookup height if set - 1-29-14<br/>"
-"Version: 0.4 - Added validations on height values to ensure only number values are passed - 2-7-14<br/>"
-"Version: 0.5 - Baseline commit before code style changes - 3-20-14<br/>"
-"Version: 0.6 - Code style Issues addressed - 3-20-14<br/>"
-"Version: 0.7 - Updated component outline bounding box logic - 4-13-14<br/>"
-"Version: 0.8 - Cleanup of unused functions - 5-3-14<br/>"
-"Version: 0.9 - Fixed minor GUI issues related to reset of html table values - 5-6-14<br/>"
-"Version: 0.10 - Added logic for varied heights in packages on board - 5-6-14<br/>"
-"Version: 0.11 - Fixed bug in logic to handle HEIGHT attributes set with numbertext value.- 5-13-14<br/>"
-"Version: 1.0 - Initial production release.- 5-21-14<br/>"
-"Version: 1.1 - Change to consider circles on layer 20 regardless of other lines. Improved arc/circle processing logic. - 9-6-14<br/>"
-"Version: 2.0 - Updated to integrate with SSI IDF site - 3-25-15<br/>"
-"Version: 2.1 - Updates to include banner and links - 3-29-15<br/>"
-"Version: 2.2 - Updates to logic to open links in browser - 4-7-15<br/>"
-"Version: 2.3 - UI Updates. Eagle logic for webpage links. - 8-28-15<br/>"
-"Version: 2.4 - Fixed issue with OSX open url command. - 11-2-15<br/>"
-"Version: 2.5 - Update for https. - 10-30-17<br/>"
+"Version: 1.0 - bases on eagleidfexporter written by Marc Battistello. Reduced to minimal user interaction."
 "</p>"
-"<author>Author: marc.battistello@gmail.com</author>"
+"<author>Author: mario.blunk@blunk-electronic.de</author>"
 
 #require 5.1000
-string version = "2.5";  //ulp version
+string version = "1.0";  //ulp version
 
 //vars used for the text dialog
 string TextMessageDialog;  //used to store text shown to user
@@ -32,7 +14,7 @@ string HeightHtmlTable = "";
 
 string BoardThickness = "1.6";  //mm
 string WireLayer = "20";
-//string DummyHistory[];
+
 
 string LibraryLookup = "RCL:RESISTOR:TRANSISTOR:PINHEAD:RESISTOR-DIL:SMARTPRJ:C5B2,5A:CAP-WI:POLCAP:ELKO:CON-PTR500:SPECIAL:LED:CAPACITOR-WIMA:CON-WAGO-500:CON-HARTING-ML:ST-ML:CON-ML:CON-LSTB:CON-BERG:CON-SUBD:POLCAP";
 string Libraries[];  //used to hold Libraries
@@ -40,26 +22,6 @@ string PackageOutlines[];  //used to hold outlines of packages
 int PackageCounter = 0; //keeps track of how many entries in packages outline array
 
 string NULL_HEIGHT = "0.000000";  //used for null heights
-
-//web request urls
-string Host = "https://www.simplifiedsolutionsinc.com";
-string Service_port = "8080";
-//string service_port = "80";
-string Static_port = "80";
-string Service_name = "EMN-EMPAdvancedApp/EagleTo3DSSIServlet";
-string Login_name = "EMN-EMPAdvancedApp/LinkLoginServlet?eagle";
-string Static_name = "EagleTo3D/";
-//string Service_url = Host + ":" + Service_port + "/" + Service_name;
-//string Login_url = Host + ":" + Service_port + "/" + Login_name;
-
-string Service_url = Host + "/" + Service_name;
-string Login_url = Host + "/" + Login_name;
-
-string Static_url = Host + "/" + Static_name;
-string Purchase_url = "https://shop.cadsoftusa.com/en/addons.html";
-
-string Learnmore_url = "http://blog.cadsoftusa.com/2015/04/eagle-and-idf-to-3d/?CMP=e-817e-00001026";
-string Contactus_url = "mailto:support@simplifiedsolutionsinc.com";
 
 
 int useSecondaryMappings = 1;
@@ -318,7 +280,6 @@ int IsWindows() {
      return 1;
 }  //end sub
 
-
 int IsMac(){
      if( (strsub( OS_SIGNATURE, 0, 3 ) == "Mac") ||  (strsub( OS_SIGNATURE, 0, 3 ) == "MAC") )
           return 1;
@@ -326,27 +287,6 @@ int IsMac(){
      return 0;
 
 }
-
-void LaunchBrowser( string url ){
-
-     string launchCmd = "";
-
-     if( IsWindows() ){
-          launchCmd = "explorer \"" + url + "\"";
-          }
-     else if( IsMac() ){
-          launchCmd = "open \"" + url + "\"";
-          }
-     else{
-          //assume all others linux
-          //if you are on linux then change this line if the buttons dont work
-          launchCmd = "xdg-open " + url;
-          }
-
-
-     //run system command
-     system( launchCmd );
-     }  //end launch browser
 
 string GetFileSeperator() {
 
@@ -425,107 +365,6 @@ string CleanString(string dirtyString) {
      }  //end for
 
      return cleanedString;
-}  //end sub
-
-// Removes spaces in string and replaces with <S/>
-string ReplaceSpaceWithUnderscore(string dirtyString) {
-
-     string cleanedString;
-
-     for (int i = 0; dirtyString[i]; ++i) {
-          if (dirtyString[i] == ' ') {
-               cleanedString += "_";
-          } else {
-               cleanedString += dirtyString[i];
-          }  //end if-else
-     }  //end for
-
-     return cleanedString;
-}  //end sub
-
-//  0-9, letters, dashes, and underscores are always safe.
-
-// Reads in file and converts it to be used in a html form submit
-string ParseFileToHtmlForm(string filePath) {
-
-     string fileContents;
-
-     int in = fileread(fileContents, filePath);
-
-     fileContents = RemoveCarriageReturns(fileContents);
-
-     fileContents = RemoveSpaces(fileContents);
-
-     //dlgMessageBox( "File input value:" + in );
-
-     return fileContents;
-}  //end sub
-
-string ParseStringToHtmlForm(string input) {
-
-     return RemoveSpaces(RemoveCarriageReturns(input));
-
-}  //end sub
-
-//this function Is used to Get the html to show in the UI.
-//it uses a fixed header and footer and the call sets the body.
-string GetHtmlText(string body) {
-
-     string os;
-
-     //build header html
-     string htmlHeader =
-               "<table border=0 width=\"100%\" height=\"100%\"> \
-                                        <tr> \
-                                             <td colspan=2><hr size=1></td> \
-                                        </tr> \
-                                        <tr> \
-                                             <td align=left colspan=2><h2>EAGLE 3D Service</h2></td> \
-                                        </tr> \
-                                        <tr> \
-                                             <td colspan=2><hr size=1></td> \
-                                        </tr>";
-
-     string htmlFooter = "";  //footer will be built later including OS padding
-
-     //detect if windows or other
-     if (IsWindows()) {
-          os = "Windows";
-     } else {
-          os = "Mac/Linux";
-     }
-
-     //build footer and include OS specific padding for formatting.
-     if (IsWindows()) {
-          htmlFooter += "<br/><br/><br/><br/><br/><br/><br/>";
-     } else {
-          htmlFooter += "";
-     }  //end if-else
-
-     //build version string
-     string versionString = "ULP Version: " + version + ", OS: " + os;
-
-     //build footer text
-     htmlFooter +=
-               " \
-                              <tr> \
-                                   <td align=left colspan=2></td> \
-                              </tr> \
-                              <tr> \
-                                   <td align=left><a href=\"http://www.cadsoftusa.com/\">CADSoft</a> | <a href=\"mailto:support@cadsoftusa.com?Subject=Help with IDF Exporter&body=Enter description of Issue. (Version="
-                         + versionString
-                         + ")\">Help</a></td> \
-                                   <td align=right>( ULP Version: "
-                         + version + "\t, OS: " + os
-                         + " )</td> \
-                              </tr> \
-                              <tr> \
-                                   <td colspan=2><hr size=1></td> \
-                              </tr> \
-                         </table>";
-
-     //return htmlHeader + "<tr><td align=left colspan=2>" + body + "</td></tr>" + htmlFooter;
-     return htmlHeader + "<tr><td align=left colspan=2>" + body + "</td></tr></table>";
 }  //end sub
 
 real GetDistBetweenPts(real x1, real y1, real x2, real y2) {
@@ -2102,123 +1941,9 @@ string GenerateEmp() {
      return emp;
 }  //end sub
 
-//Submits emn and emp data to IDF site. IDF returns full html page.
-void SubmitFormData(){
-
-     //update user now as the post will take some time to start
-     TextMessageDialog = GetHtmlText( "<font size=5 color=green><BR>3D build request submitted. Please wait for update...<BR><br><br><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></font>" );
-
-     dlgRedisplay();
-
-     if( 0 ){
-          dlgMessageBox( path_ulp[0] );
-          }
-
-
-     //get board name
-     string boardName;
-     string boardDir;
-
-     board( BRD ){
-          boardName = filename( BRD.name );
-
-          boardDir = filedir( BRD.name );
-          }  //end board
-
-     //get emn and emp strings
-     string emnData = GenerateEmn() + "\n";
-     string empData = GenerateEmp() + "\n";
-
-
-     //convert to html format
-     emnData = ParseStringToHtmlForm( emnData );
-     empData = ParseStringToHtmlForm( empData );
-
-
-     //data for url post
-     string postResponse;
-     string postData;
-     int requestSubmitted = 0;
-
-     string urlParams;
-
-     //strings used to build some html elements
-     string tempStr;
-     string thumbnailImg;
-     string pdf3dLink;
-     string thumbnailLink;
-
-     string purchaseStlLink;
-     string purchaseDownloadLink;
-     string complete3DDesignLink;
-
-     //response data
-     string jobId;
-     string jobStatus;
-     string percentComplete;
-     string sessionKey;
-     string sessionLink;
-
-     string downloadPurchaseUrl;
-     string stlPurchaseUrl;
-     string complete3DDesignUrl;
-
-     int jobCompleted = 0;
-
-
-
-     //submit post and get response
-     sprintf( postData,"emn=%s\nemp=%s\nboardname=%s\nversion=%s", emnData, empData, boardName, version );
-
-     if( netpost( postResponse, Service_url, postData ) >= 0 ) {
-
-          //dlgMessageBox( postResponse );
-
-          //get session key response
-          sessionKey = xmltext( postResponse, "response/session_key" );
-          //sessionLink = xmltext( postResponse, "response/session_link" );
-
-          //sprintf( complete3DDesignLink, "<a href=\"%s\">Click here</a> to open your board.", sessionLink );
-
-
-          TextMessageDialog =
-                         GetHtmlText( "<font size=5 color=green><br>Your board has been uploaded and is ready.<br> \
-                                             Your browser will open in the background.</font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>" );
-
-          //update display
-          dlgRedisplay();
-
-          string login = Login_url + "&sid=" + sessionKey;
-
-          LaunchBrowser( login );
-
-          }
-     else{
-          //handle error in netpost
-          TextMessageDialog = GetHtmlText( "We were unable to complete your request at this time. Please try submit again. \
-                                                       If error persists contact support. \
-                                                       <a href=\"mailto:support@simplifiedsolutionsinc.com?subject=EAGLE-to-3D%20Support\">Contact Support</a> <BR/>\
-                                                       Error Code:" + neterror() + "<BR/>Post Response:" + postResponse );
-
-          dlgRedisplay();
-
-
-          }  //end if-else for posting
-
-
-     }  //end sub
 
 //main function to generate IDF fils
 void GenerateEmnEmpFiles() {
-
-     //update user now as the post will take some time to start
-     TextMessageDialog = GetHtmlText(
-               "<font size=5 color=green>IDF File generation in process.</font>");
-
-     HeightHtmlTable = "";  //reset
-
-     //refresh display to show message
-     dlgRedisplay();
 
      //get board name
      string boardName;
@@ -2227,7 +1952,6 @@ void GenerateEmnEmpFiles() {
      board(BRD)
      {
           boardName = filename(BRD.name);
-
           boardDir = filedir(BRD.name);
      }  //end board
 
@@ -2236,38 +1960,16 @@ void GenerateEmnEmpFiles() {
      string empData = GenerateEmp();
 
      //write strings to files
-     string dirName;
-     dirName = dlgDirectory("Select a directory to write IDF files to:",
-               boardDir);
 
-     //show path to user
-     dlgMessageBox(
-               "Writing IDF Files: " + dirName + GetFileSeperator()
-                         + filesetext(boardName, ".emn"));
-
-     output(dirName + GetFileSeperator() + filesetext(boardName, ".emn"), "wt")
+	 output(filesetext(boardName, ".emn"), "wt")	 
      {
           printf(emnData);
      }
 
-     output(dirName + GetFileSeperator() + filesetext(boardName, ".emp"), "wt")
+     output(filesetext(boardName, ".emp"), "wt")	 
      {
           printf(empData);
      }
-
-     //complete height table
-     HeightHtmlTable =
-               "The table below shows the components placed in the emn/emp files. \
-                              The height field in the table indicates an extrusion height used in generating the components on the 3D model. \
-                              A default value is set if a value is not set and is indicated in yellow. The values are defined as HEIGHT attribute values and can be updated in the board file. \
-                              Heights are set at the element level and can vary by placement. This may cause unexpected behavior if you only update a single component in the file.<BR> \
-                              <table border=1><tr><th>Ref. ID</th><th>Alt. Name</th><th>Package Name</th><th>Height</th></tr>"
-                         + HeightHtmlTable + "</table>";
-     //<table border=1><tr><th>Ref. ID</th><th>Alt. Name</th><th>Package Name</th><th>Height</th></tr>" + HeightHtmlTable + "</table>";
-
-     TextMessageDialog = GetHtmlText(
-               "<font size=3 color=green>IDF Files written successfully to "
-                         + dirName + "</font><BR><BR>" + HeightHtmlTable);
 }  //end sub
 
 void LoadLibraries() {
@@ -2279,23 +1981,6 @@ void LoadLibraries() {
 
 }  //end sub
 
-string GetHomepageBanner(){
-     string temp;
-     //get banner along with version and OS data to help with support and detect unsupportedconfigs for future releases
-     string url  = "https://www.simplifiedsolutionsinc.com/EagleTo3D/eagle_to_3d_ssi_banner.php?os=" + OS_SIGNATURE + "&v=" + version;
-
-     if( netget( temp, url) >= 0 ){
-          //pass. split string to get banner and links
-          return temp;
-          }
-     else{
-          //fail
-          return "Problem connecting to IDF services. Check your internet connection.~" + Learnmore_url + "~" + Purchase_url + "~" + Contactus_url + "~1";
-
-          }  //end if-else
-
-     }
-
 
 //-----------------------------------------------------------------------------
 // main section
@@ -2306,153 +1991,46 @@ void main() {
      //check to make sure board Is loaded
      if (!board) {
           dlgMessageBox(
-                    usage
-                              + "<hr><b>ERROR: No board!</b><p>\nThis program can only work in the layout editor.</p>");
+			usage 
+				+ "<hr><b>ERROR: No board!</b><p>\nThis program can only work in the layout editor.</p>");
           exit(-1);
      }
 
      //load Libraries array for lookups
      LoadLibraries();
 
-     //get banner
-     string homepageBanner = GetHomepageBanner();
+	 
+	//show dialog to user
+	int mainDlgResult = dlgDialog( "IDF Exporter" ) {
+		//main layout
+		dlgVBoxLayout {
 
-     //parse components of banner response
-     string fields[];
-     int respCount = strsplit(fields, homepageBanner, '~');
-     string banner = fields[0];
-     string learnMoreLink = fields[1];
-     string purchaseLink = fields[2];
-     string contactUsLink = fields[3];
-     string enableFusion = fields[4];
-     string fusionLink = fields[5];
+			dlgHBoxLayout dlgSpacing( 400 );//sets width
 
-     string startHTML = "<font size=\"4\"> \
-               <table width=\100%\" cellpadding=2 align=center> \
-               <tr> \
-               <td colspan=2> \
-                    <img src=\"https://www.simplifiedsolutionsinc.com/images/3dpcb2.jpg\" width=400> \
-               </td> \
-               </tr> \
-               <tr> \
-               <td colspan=2> \
-                    " + banner + " \
-               </td> \
-               </tr> \
-               </table></font>";
+			//add options for IDF export
+			dlgHBoxLayout {
 
+				dlgLabel("Layer for wires (Default=20): ");
 
-     //set initial text view content
-     TextMessageDialog = GetHtmlText( startHTML );
+				dlgStringEdit( WireLayer );
 
-     //show dialog to user
-int mainDlgResult = dlgDialog( "EAGLE IDF and 3D service. Powered by Simplified Solutions." ) {
-     //main layout
-     dlgVBoxLayout {
+				dlgLabel("Board Thickness (MM): ");
 
-          //set width by creating a spacing hbox to drive width
-          if( IsWindows() ) {
-               //windows
-               dlgHBoxLayout dlgSpacing( 800 );//sets width
-          }
-          else {
-               //mac/linux
-               dlgHBoxLayout dlgSpacing( 825 );//sets width
-          }  //end if-else
+				dlgStringEdit( BoardThickness );
 
-          //set height and text view
-          dlgHBoxLayout {
-               dlgTextView( TextMessageDialog );  //text view. holds html
+			}  //end box layout
 
-               dlgVBoxLayout{
-               //button group
-               dlgGroup("Free Options") {
-                    //dlgGroup("Save") {
-                         dlgPushButton( "Save to IDF" ) {
+			//buttons to submit and exit
+			dlgHBoxLayout {
 
-                                             //submit data to idf site
-                                             GenerateEmnEmpFiles();
-                                             }  //end button
-
-                         dlgLabel( "<font size=2>Generate IDF files (emn/emp) and save locally for import to Mechanical CAD</font>");
-                      //   }
-                  }  //end free option
-
-               dlgGroup("Subscription Options") {
-                    //dlgGroup("Enhanced 3D Output (IDF-TO-3D)") {
-                         dlgPushButton( "Export to STEP, STL, or 3D PDF" ) {
-
-                                             //submit data to idf site
-                                             SubmitFormData();
-                                             }  //end button
-
-                         dlgLabel( "<font size=2>Loads your IDF files to the EAGLE 3D service interface.  Review, update and export your IDF files to 3D PDF (free), STEP, or STL. (IDF-TO-3D subscription required for STEP and STL)</font><BR><BR><font size=2>Purchase a subscription to the EAGLE 3D service for as little as $300USD. Visit our webshop to find out more.</font>");
-                    //     }
-
-                         //dlgGroup("Purchase") {
-                              dlgPushButton( "Purchase IDF-to-3D Subscription" ) {
-
-                                                  LaunchBrowser( purchaseLink );
-                                                  }  //end button
-
-
-                              //dlgLabel( "<font size=2>Purchase a subscription to the EAGLE 3D service for as little as $300USD. Visit our webshop to find out more.</font>");
-                         //     }
-               }  //end group
-
-
-                    if( enableFusion == "1" ){
-                         dlgGroup("Fusion 360") {
-                              dlgPushButton( "Export design to Autodesk Fusion 360" ) {
-
-                                                  LaunchBrowser( fusionLink );
-                                                  }  //end button
-
-                              dlgLabel( "<font size=2>Using EAGLE 3D service subscription, export your design to Fusion 360, a cloud-base tool for mechanical and industrial design.(COMING SOON)</font>");
-                              }
-                         }  //end if
-
-
-
-
-               }  //end vbox for options
-
-               //sets height
-               if( IsWindows() ) {
-                    //windows
-                    dlgVBoxLayout dlgSpacing( 475 );//sets height
-                    }
-               else {
-                    //mac/linux
-                    dlgVBoxLayout dlgSpacing( 500 );//sets height
-                    }  //end if-else
-
-          }  //end hbox layout
-
-          //add options for IDF export
-          dlgHBoxLayout {
-
-               dlgLabel("Layer for wires (Default=20): ");
-
-               dlgStringEdit( WireLayer );
-
-               dlgLabel("Board Thickness (MM): ");
-
-               dlgStringEdit( BoardThickness );
-
-          }  //end box layout
-
-          //buttons to submit and exit
-          dlgHBoxLayout {
-
-
-               dlgPushButton( "Contact Us" ) LaunchBrowser( contactUsLink );
-
-               dlgPushButton( "Learn More" ) LaunchBrowser( learnMoreLink );
-
-               dlgPushButton( "Exit" ) dlgReject();
-          }  //end box layout
-     }  //end v box layout
-};  //end mainDlgResult
+				dlgPushButton( "Save and Exit" ) 
+						{
+						GenerateEmnEmpFiles();
+						dlgReject();
+						}
+						
+			}  //end box layout
+		}  //end v box layout
+	};  //end mainDlgResult
 
 }  //end main

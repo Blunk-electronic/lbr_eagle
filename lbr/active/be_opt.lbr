@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -115,7 +115,7 @@ date: 2015-01-21</description>
 </package>
 <package name="T_ROUND_3MM">
 <description>edited: Mario Blunk / Blunk electronic&lt;br&gt;
-date: 2019-05-21</description>
+date: 2019-08-07</description>
 <wire x1="1.5748" y1="-1.27" x2="1.5748" y2="1.27" width="0.254" layer="51"/>
 <wire x1="-1.524" y1="0" x2="-1.1708" y2="0.9756" width="0.1524" layer="51" curve="-39.80361"/>
 <wire x1="-1.524" y1="0" x2="-1.1391" y2="-1.0125" width="0.1524" layer="51" curve="41.633208"/>
@@ -135,8 +135,8 @@ date: 2019-05-21</description>
 <wire x1="-1.7643" y1="-1.0082" x2="0" y2="-2.032" width="0.254" layer="21" curve="60.255215"/>
 <wire x1="-2.032" y1="0" x2="-1.7891" y2="0.9634" width="0.254" layer="51" curve="-28.301701"/>
 <wire x1="-2.032" y1="0" x2="-1.7306" y2="-1.065" width="0.254" layer="51" curve="31.60822"/>
-<pad name="A" x="-1.27" y="0" drill="0.6" shape="octagon"/>
-<pad name="C" x="1.27" y="0" drill="0.6" shape="octagon"/>
+<pad name="A" x="-1.27" y="0" drill="0.8" shape="octagon"/>
+<pad name="C" x="1.27" y="0" drill="0.8" shape="octagon"/>
 <text x="2.5" y="0" size="1" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <text x="2.5" y="-1.5" size="1" layer="27" font="vector" ratio="15">&gt;VALUE</text>
 <circle x="0" y="0" radius="2.549509375" width="0.15" layer="39"/>
@@ -343,13 +343,13 @@ date: 2015-10-02</description>
 </package>
 <package name="T_ROUND_5MM">
 <description>edited: Mario Blunk / Blunk electronic &lt;br&gt;
-date: 2019-05-21</description>
+date: 2019-08-07</description>
 <wire x1="-0.635" y1="0" x2="0" y2="0.635" width="0.1524" layer="51" curve="-90"/>
 <wire x1="-1.016" y1="0" x2="0" y2="1.016" width="0.1524" layer="51" curve="-90"/>
 <wire x1="0" y1="-0.635" x2="0.635" y2="0" width="0.1524" layer="51" curve="90"/>
 <wire x1="0" y1="-1.016" x2="1.016" y2="0" width="0.1524" layer="51" curve="90"/>
-<pad name="A" x="-1.27" y="0" drill="0.6" shape="octagon"/>
-<pad name="C" x="1.27" y="0" drill="0.6" shape="octagon"/>
+<pad name="A" x="-1.27" y="0" drill="0.8" shape="octagon"/>
+<pad name="C" x="1.27" y="0" drill="0.8" shape="octagon"/>
 <text x="2.5" y="0" size="1" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <text x="2.5" y="-1.5" size="1" layer="27" font="vector" ratio="15">&gt;VALUE</text>
 <circle x="0" y="0" radius="3.5" width="0.15" layer="39"/>

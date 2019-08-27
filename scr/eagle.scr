@@ -1,12 +1,13 @@
-# Configuration Script
-#
-# This file can be used to configure the editor windows. Settings for all
-# editor windows (for example, a common background colour) can be made in
-# the very beginning of the file, which means before  BRD: .
+# EAGLE CONFIGURATION SCRIPT
+############################################################
+# This script is executed automaticall every time eagle is started.
+
+# The two letters "CS" indicate a "construction site" where things are not
+# finished yet or intended for the future.
 
 
-#
-# everything that shall be executed in the Layout editor
+# EVERYTHING THAT SHALL BE EXECUTED IN THE LAYOUT EDITOR:
+############################################################
 BRD:
 GRI mm;
 GRI 1;
@@ -21,13 +22,22 @@ CHANGE size 1;
 CHANGE width 0.15;
 CHANGE ratio 13;
 CHANGE drill 0.3;
-ASSIGN CTRL+B DISP bpla bdoc bnam bval borig -tpla -tdoc -tnam -tval -torig dim;
-ASSIGN CTRL+T DISP -bpla -bdoc -bnam -bval -borig tpla tdoc tnam tval torig dim;
-ASSIGN ALT+R 'script rats'; #RIP @; DISP -2 -15;
+
+ASSIGN CTRL+B disp none doc dim bpla bdoc bnam bval borig;
+ASSIGN CTRL+T disp none doc dim tpla tdoc tnam tval torig;
+
+ASSIGN ALT+T disp none dim doc tpla tnam tval top via pad
+ASSIGN ALT+B disp none dim doc bpla bnam bval bot via pad
+
+#ASSIGN ALT+R 'script rats'; #RIP @; DISP -2 -15;
+ASSIGN ALT+R rats; rip @;
+
 #ASSIGN ALT+V VIA;
 ASSIGN ALT+D 'drc;';
-SET Option.AutoSetRouteWidthAndDrill 1;
+
+# SET Option.AutoSetRouteWidthAndDrill 1;
 SET pad on;
+
 layer 53 tCopper;
 #SET color_layer tCopper 
 layer 54 bCopper;
@@ -40,10 +50,15 @@ layer 54 bCopper;
 # 		Make Net/Partlist : | \
 # 			}';
 
+# show these layers on opening a layout (layer 120 contains placement
+# notes):
+display none dim doc tpla tdoc tval 120
 
-#
-# everything that shall be executed in the Schematic editor
-#
+
+
+
+# EVERYTHING THAT SHALL BE EXECUTED IN THE SCHEMATIC EDITOR
+############################################################
 SCH:
 #attribute * project '';
 GRI inch;
@@ -62,13 +77,20 @@ SET AUTO_JUNCTION ON;
 #CLASS 2 supply;
 #CLASS 3 hv;
 
-#unuse all libraries incl managed libraries
+# Never use shipped libraries incl. managed libraries:
 use -*;
 
-#use custom libraries only
-use ../../lbr_eagle/lbr/misc/*
-use ../../lbr_eagle/lbr/active/*
-use ../../lbr_eagle/lbr/passive/*
+# To use custom libraries only:
+# On Linux uncomment these statements:
+# use ../../../lbr_eagle/lbr/misc/*
+# use ../../../lbr_eagle/lbr/active/*
+# use ../../../lbr_eagle/lbr/passive/*
+
+# On Windows uncomment these statements (CS: test required):
+# use ..\..\..\lbr_eagle\lbr\misc\*
+# use ..\..\..\lbr_eagle\lbr\active\*
+# use ..\..\..\lbr_eagle\lbr\passive\*
+
 
 # MENU 'Tools {\
 # 		#New Page : SCR new_page; | \
@@ -78,21 +100,29 @@ use ../../lbr_eagle/lbr/passive/*
 # 			}';
 
 
-#
-# everything that shall be executed in the Library editor
-#
-LBR:
+
 
 #
-# everything that shall be executed in the Device editor
+# EVERYTHING THAT SHALL BE EXECUTED IN THE LIBRARY EDITOR
+############################################################
+LBR:
+
+
+
+
 #
+# EVERYTHING THAT SHALL BE EXECUTED IN THE DEVICE EDITOR
+############################################################
 DEV:
 #ASSIGN CTRL+A ATT commissioned '201x-xx-xx' constant; # nogo
 ASSIGN CTRL+A 'ATT commissioned constant; ATT updated constant; ATT function variable; \
                ATT part_code_bel variable; ATT part_code_ext variable; ATT bom constant';
 
+               
+               
 
-# everything that shall be executed in the Symbol editor
+# EVERYTHING THAT SHALL BE EXECUTED IN THE SYMBOL EDITOR
+############################################################
 SYM:
 CHANGE font fixed;
 GRI default;
@@ -106,8 +136,8 @@ CHANGE size 0.05;
 
 
 #
-# everything that shall be executed in the Package editor
-#
+# EVERYTHING THAT SHALL BE EXECUTED IN THE PACKAGE EDITOR
+############################################################
 PAC:
 GRID mm;
 GRID 0.5;
